@@ -1,6 +1,6 @@
 
 # Sprint 1
-Ce sprint débute le 22 Octobre et se termine le 9 Novembre.
+Ce sprint débute le 22 octobre et se termine le 9 novembre.
 
 # Les issues qui seront développées durant le sprint
 | ID | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Difficulté | Priorité | 
