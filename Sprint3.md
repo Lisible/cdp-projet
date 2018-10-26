@@ -1,5 +1,5 @@
 # Sprint 3
-Ce sprint débute le 00 mois et se termine le 00 mois.
+Ce sprint débute le 26 novembre et se termine le 7 décembre.
 
 # Les issues qui seront développ
 | ID | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Difficulté | Priorité | 
