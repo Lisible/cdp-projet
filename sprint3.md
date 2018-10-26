@@ -1,7 +1,7 @@
 # Sprint 3
 Ce sprint débute le 26 novembre et se termine le 7 décembre.
 
-# Les issues qui seront réalisées
+# Les issues qui seront réalisées durant le sprint
 | ID | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Difficulté | Priorité | 
 |----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|----------| 
 | 5  | En tant qu'utilisateur, je souhaite pouvoir consulter la liste des membres d'un projet dont je fais partie afin d'accéder aux informations de contact (prénom, nom, adresse email) de ces derniers.                                                                                                                                                                                                                                                                                     | 2          | Basse | 
