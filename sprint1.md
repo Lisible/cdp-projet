@@ -2,7 +2,7 @@
 # Sprint 1
 Ce sprint débute le 22 octobre et se termine le 9 novembre.
 
-# Les issues qui seront développées durant le sprint
+# Les issues qui seront réalisées durant le sprint
 | ID | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Difficulté | Priorité | 
 |----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|----------| 
 | 3  | En tant qu'utilisateur, je souhaite cliquer sur le bouton "Nouveau projet" pour saisir un nom (obligatoire), une description (optionelle), la durée d'un sprint (2 semaines par défaut), ainsi que la date de début du projet afin de créer un nouveau projet.                                                                                                                                                                                                                          | 3          | Haute | 
