@@ -1,0 +1,10 @@
+Depuis la liste des projet:
+Cliquer sur le bouton "+"
+
+Arrivé sur la page de création de projet:
+Saisir un nom de projet
+Saisir une date de début de projet
+Cliquer sur "Enregistrer"
+
+Arrivé sur la liste des projets:
+Constater la présence du projet dans la liste des projets
