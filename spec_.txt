@@ -1,5 +1,7 @@
 --TACHES DE DESIGN - CONDUITE DE PROJET --
 
+Description générale des composants de chacune des pages de notre projet.
+
 --DESIGN DE LA PAGE DE CREATION DE USER STORY--
 
 Nom du fichier du formulaire: add_user_story.php
@@ -13,4 +15,9 @@ c.f. la maquette pour les champs du formulaire
 
 Nom du fichier: list_backlog.php
 
-Nom du bouton permettant d'ajouter une US: "Ajouter"
+Nom du bouton permettant d'ajouter une US: "Ajouter une User Story"
+Nom du bouton permettant de retourner sur la page du projet: "Retour"
+Nom du bouton permettant de modifier une US: "Modifier"
+Nom du bouton permetttant de supprimer une US: "Supprimer"
+
+c.f. la maquette pour la disposition de la liste
