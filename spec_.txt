@@ -17,7 +17,6 @@ Nom du fichier: list_backlog.php
 
 Nom du bouton permettant d'ajouter une US: "Ajouter une User Story"
 Nom du bouton permettant de retourner sur la page du projet: "Retour"
-Nom du bouton permettant de modifier une US: "Modifier"
 Nom du bouton permetttant de supprimer une US: "Supprimer"
 
 c.f. la maquette pour la disposition de la liste
