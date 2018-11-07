@@ -1,0 +1,35 @@
+version: '3'
+services:
+    php-apache:
+        build:
+            context: ./Docker/php-apache
+        ports:
+            - 80:80
+        volumes:
+            - ./src:/var/www/html
+        links:
+            - mariadb:mysql
+    mariadb:
+        image: mariadb:10.1
+        volumes:
+            - mariadb:/var/lib/mysql
+            - ./Docker/mariadb_database:/docker-entrypoint-initdb.d
+        environment:
+            MYSQL_DATABASE: cdp
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_CHARSET: utf8mb4
+            MYSQL_COLLATION: utf8mb4_general_ci
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - 8080:80
+        links:
+            - mariadb:mysql
+        environment:
+            PMA_HOST: mysql
+            MYSQL_USERNAME: root
+            MYSQL_ROOT_PASSWORD: root
+
+volumes:
+        mariadb:
