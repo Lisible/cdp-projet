@@ -1,5 +1,7 @@
 <?php
 
+include_once('model/project.php');
+
 class DAO
 {
 	public static function createProject($project)

@@ -4,7 +4,7 @@ include_once('framework/controller.php');
 new class extends Controller
 {
 	public function setup() {
-		$this->setData('title', 'Liste des projets');
+		$this->setData('title', 'Index');
 	}
 
 	public function onGet() {
