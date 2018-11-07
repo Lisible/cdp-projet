@@ -1,0 +1,7 @@
+Depuis la page de la liste des projets :
+Cliquer sur le titre ou l'id d'un projet figurant dans la liste
+
+#Scénario 1 : Consulter le backlog d'un projet :
+Arrivé à la page de consultation détaillée d'un projet
+Cliquer sur le bouton "Backlog"
+Arrivé à la page de consultation du backlog sous le forme d'un tableau de User Story
