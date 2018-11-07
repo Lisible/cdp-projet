@@ -27,3 +27,13 @@ Nom du fichier du formulaire : add_project.php
 Nom du bouton de validation: "Valider"
 Nom du bouton d'annulation: "Annuler"
 c.f. la maquette pour les champs du formulaire
+
+--DESIGN DE LA PAGE DE CONSULTATION DU PROJET--
+
+Nom du fichier: project_details.php
+Nom du bouton permettant d'accéder à la page du Backlog : "Backlog"
+Nom du bouton permettant d'accéder à la liste des sprints : "Sprints"
+Nom du bouton permettant d'accéder à la page d'ajout de membre de projet : "Ajouter un membre"
+Nom du bouton permettant d'accéder à la liste des membres du projet : "Membres"
+Nom du bouton permettant de retourner à la liste des projets : "Retour"
+c.f. la maquette pour visualiser les détails du projet
