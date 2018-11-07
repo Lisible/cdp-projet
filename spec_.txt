@@ -20,3 +20,10 @@ Nom du bouton permettant de retourner sur la page du projet: "Retour"
 Nom du bouton permetttant de supprimer une US: "Supprimer"
 
 c.f. la maquette pour la disposition de la liste
+
+--DESIGN DE LA PAGE DE CREATION DE PROJET--
+
+Nom du fichier du formulaire : add_project.php
+Nom du bouton de validation: "Valider"
+Nom du bouton d'annulation: "Annuler"
+c.f. la maquette pour les champs du formulaire
