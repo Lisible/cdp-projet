@@ -1,3 +1,5 @@
+--TACHES DE DESIGN - CONDUITE DE PROJET --
+
 --DESIGN DE LA PAGE DE CREATION DE USER STORY--
 
 Nom du fichier du formulaire: add_user_story.php
@@ -6,3 +8,5 @@ Nom du bouton de validation: "Valider"
 Nom du bouton d'annulation: "Annuler"
 
 c.f. la maquette pour les champs du formulaire
+
+--DESIGN DE LA PAGE DU BACKLOG--
