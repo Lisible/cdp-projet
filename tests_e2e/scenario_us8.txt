@@ -1,0 +1,36 @@
+#Scenarii de l'US8
+#Scenario commun: accès au formulaire
+
+Depuis la liste des User Stories:
+Cliquer sur le bouton "ajouter une User Story"
+
+#Scenario 1: Ajout normal d'une US au Backlog
+
+Arrivé sur la page de la création d'une User Story:
+Saisir son identifiant
+Saisir sa description
+Saisir sa difficulté
+Choisir son niveau de priorité
+Possibilité de saisir un numéro de sprint
+Cliquer sur "Valider"
+Arrivé sur la liste des User Stories:
+Constater l'ajout de l'User Story dans la liste.
+
+#Scenario 2: Omission d'un champ obligatoire lors de la saisie d'information:
+
+Arrivé sur la page de la création d'une User Story:
+Saisir/Choisir tous sauf un champ obligatoire
+Cliquer sur "Valider"
+Constater l'apparition d'un pop-up nous indiquant qu'un champ obligatoire a été omis
+Fermer le pop-up
+Constater que le champ en question est contrasté en rouge
+
+#Scenario 3: Remplir un champs par une valeur invalide
+
+Arrivé sur la page de la création d'une User Story:
+Saisir/Choisir tous les champs obligatoire sauf l'identifiant
+Renseigner une lettre/un chiffre déjà assigné dans le champ de l'identifiant
+Cliquer sur "Valider"
+Constater l'apparition d'un pop-up nous indiquant qu'un champ est invalide
+Fermer le pop-up
+Constater que le champ en question est contrasté en rouge
