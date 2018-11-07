@@ -2,7 +2,7 @@
 #Scenario commun: accès au formulaire
 
 Depuis la liste des User Stories:
-Cliquer sur le bouton "ajouter une User Story"
+Cliquer sur le bouton "Ajouter une User Story"
 
 #Scenario 1: Ajout normal d'une US au Backlog
 
