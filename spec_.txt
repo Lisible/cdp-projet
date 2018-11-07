@@ -10,3 +10,7 @@ Nom du bouton d'annulation: "Annuler"
 c.f. la maquette pour les champs du formulaire
 
 --DESIGN DE LA PAGE DU BACKLOG--
+
+Nom du fichier: list_backlog.php
+
+Nom du bouton permettant d'ajouter une US: "Ajouter"
