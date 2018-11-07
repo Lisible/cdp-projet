@@ -1,0 +1,18 @@
+Depuis la page de consultation du backlog d'un projet
+
+#Scénario 1 : Succès de la suppression d'une US dans le backlog
+
+A partir du tableau des US, cliquer sur le bouton "Supprimer" associé à l'US qu'on souhaite supprimer
+Le popup apparaît contenant le message pour demander la confirmation de suppression
+Cliquer sur le bouton "Valider"
+Le message de confirmation de suppression est affiché
+La page de backlog est mise à jour
+Constater la disparaission de la US du backlog
+
+#Scénario 2 : Annulation de la suppression d'une US dans le backog
+
+A partir du tableau des US, cliquer sur le bouton "Supprimer" associé à l'US qu'on souhaite supprimer
+Le popup apparaît contenant le message pour demander la confirmation de suppression
+Cliquer sur le bouton "Annuler"
+La page de backlog n'a pas changé
+Constater la présence de la USdans le backlog pour laquelle on avait annulé la suppression
