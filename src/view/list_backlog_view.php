@@ -10,5 +10,5 @@
   </ul>
 <?php endif; ?>
 <?php if($DATA['backlog'] == null): ?>
-  <span id="no-project">Aucune User story</span>
+  <span id="no-us">Aucune User story</span>
 <?php endif; ?>
