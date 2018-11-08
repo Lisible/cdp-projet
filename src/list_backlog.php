@@ -9,7 +9,7 @@
     }
 
     public function onGet(){
-      $this->Data('backlog', DAO::getBacklog());
+      //$this->Data('backlog', DAO::getBacklog());
       $this->render('list_backlog_view');
     }
 
