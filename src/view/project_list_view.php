@@ -1,4 +1,4 @@
-<a href="add_project.php">+</a>
+<a href="add_project.php" id="add_project_link">+</a>
 
 <?php if($DATA['projects'] != null): ?>
 <ul id="project-list">
