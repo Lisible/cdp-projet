@@ -42,6 +42,8 @@ class DAO
 
 		return $projects;
 	}
+	
+	public static function getBacklog(){}
 
 	private static function createProjectFromQueryResult($queryResult) {
 		$project = new Project();

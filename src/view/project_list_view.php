@@ -4,8 +4,11 @@
 <ul id="project-list">
     <?php foreach($DATA['projects'] as $project): ?>
     <li>
-    	<span class="project-name">Some project</span>
-    	<a href="backlog.php">Backlog</a>
+    	<span class="project-name">
+        <?php
+          print($project->getName());
+        ?></span>
+    	<a href="list_backlog.php">Backlog</a>
     </li>
     <?php endforeach; ?>
 </ul>
