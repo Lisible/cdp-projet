@@ -8,7 +8,7 @@ new class extends Controller {
 		$this->setData('title', 'Liste des projets');
 	}
 
-	public function onGet() {
+	public function onGet($getData) {
 		$this->setData('projects', DAO::getProjects());
 		$this->render('project_list_view');
 	}
