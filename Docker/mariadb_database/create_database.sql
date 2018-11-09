@@ -14,5 +14,15 @@ CREATE TABLE Issue (issueId INT NOT NULL AUTO_INCREMENT,
                     PRIMARY KEY (issueId),
                     CONSTRAINT fkIssueProject FOREIGN KEY (projectId) REFERENCES Project(projectId));
 
+INSERT INTO Project(projectName,
+		    projectDescription,
+		    projectSprintDuration,
+		    projectBeginDate)
+VALUES ("Exemple", "Un exemple de projet", 2, '2018-12-31');
 
+INSERT INTO Issue(issueDescription, issuePriority, issueDifficulty, projectId)
+VALUES ("Une issue", 'low', 1, 1);
+
+INSERT INTO Issue(issueDescription, issuePriority, issueDifficulty, projectId)
+VALUES ("Une autre issue", 'medium', 2, 1);
                       
