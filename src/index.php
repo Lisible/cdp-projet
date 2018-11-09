@@ -7,7 +7,7 @@ new class extends Controller
 		$this->setData('title', 'Index');
 	}
 
-	public function onGet() {
+	public function onGet($getData) {
 		$this->render('index_view');
 	}
 
