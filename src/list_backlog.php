@@ -8,8 +8,8 @@
       $this->setData('title', 'Liste des US');
     }
 
-    public function onGet(){
-      $this->setData('backlog', DAO::getUserStories($_GET['project_id']));
+    public function onGet($getData){
+      $this->setData('backlog', DAO::getUserStories($getData['project_id']));
       $this->render('list_backlog_view');
     }
 
