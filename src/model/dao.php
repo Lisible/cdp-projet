@@ -67,7 +67,7 @@ class DAO
 
 		try {
 			$pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
-			$sqlQuery = 'SELECT * FROM UserStories WHERE projectId = ?;';
+			$sqlQuery = 'SELECT * FROM Issue WHERE projectId = ?;';
 			$statement = $pdo->prepare($sqlQuery);
 			$statement->execute([$projectId]);
 			$queryResults = $statement->fetchAll();
