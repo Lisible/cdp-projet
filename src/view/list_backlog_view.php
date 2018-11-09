@@ -1,6 +1,8 @@
 <a href="add_user_story.php" id="add_user_story_link">+</a>
 
-<?php if($DATA['backlog'] != null): ?>
+<?php print_r($DATA['backlog']);
+			print($GET["project_id"]);
+	if($DATA['backlog'] != null): ?>
   <ul id="backlog-list">
   <?php foreach($DATA['backlog'] as $us): ?>
      <li>
