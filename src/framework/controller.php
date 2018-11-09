@@ -33,10 +33,10 @@ abstract class Controller {
 	}
 
 	private function callOnGet() {
-		$this->onGet();
+		$this->onGet($_GET);
 	}
 
 	public function setup(){}
 	public function onPost($postData){}
-	public function onGet(){}
+	public function onGet($getData){}
 }
