@@ -1,4 +1,4 @@
-# Installer la version 0.0.1 :
+# Installer la version 0.1.0 :
 Notre programme utilise docker (avec docker-compose) pour permettre un déploiement simple de notre application.
 
 
