@@ -8,7 +8,10 @@
         <?php
           print($project->getName());
         ?></span>
-    	<a href="list_backlog.php?project_id="<?php print($project->getId())?>>Backlog</a>
+    	<a href=<?php echo '"list_backlog.php?project_id=';
+    								print($project->getId());
+    								echo '"'?>
+			 >Backlog</a>
     </li>
     <?php endforeach; ?>
 </ul>
