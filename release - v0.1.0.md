@@ -12,7 +12,6 @@ Le script docker se charge d'installer automatiquement la base de données requi
 
 # La liste des Issues réalisés :
 * Issue#3
-* Issue#6
 
 # La date de sortie : 
 09/11/2018
