@@ -18,7 +18,9 @@ before_install:
     - export PATH=$PATH:$PWD/geckodriver
     - geckodriver --version
     - sudo docker-compose up -d
+    - sudo apt-get install xvfb
     - pip install selenium
+    - pip install pyvirutaldisplay
 
 script:
     - sleep 30
