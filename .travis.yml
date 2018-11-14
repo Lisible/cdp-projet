@@ -18,7 +18,7 @@ before_install:
     - sudo docker-compose up -d
     - sudo apt-get install xvfb
     - pip install selenium
-    - pip install pyvirutaldisplay
+    - pip install pyvirtualdisplay
 
 script:
     - sleep 30
