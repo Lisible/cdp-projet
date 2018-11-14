@@ -1,9 +1,12 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Firefox()
+options = Options()
+options.add_argument('-headless')
+driver = webdriver.Firefox(options=options)
 driver.get("http://localhost/project_list.php")
 assert "Liste des projets" in driver.title
 elem = driver.find_element_by_id("add_project_link")
