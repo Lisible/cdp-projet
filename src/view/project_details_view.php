@@ -17,4 +17,6 @@
             </div>
         </div>
     <?php endif; ?>
+
+    <button class="btn btn-primary" type="button" onclick="window.location.href='../project_list.php'">Retour</button>
 </div>
