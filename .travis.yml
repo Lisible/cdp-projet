@@ -21,5 +21,6 @@ before_install:
     - pip install pyvirtualdisplay
 
 script:
+    - sleep 10
     - python tests_e2e/*.py
     - cat geckodriver.log
