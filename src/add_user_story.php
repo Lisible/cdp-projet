@@ -16,7 +16,7 @@ new class extends Controller {
 
     public function onPost($postData) {
         $us = new UserStory();
-        $us->setDifficulty($postData['diffuclty']);
+        $us->setDifficulty($postData['difficulty']);
         $us->setDescription($postData['description']);
         $us->setId($postData['id']);
         $us->setProjectId($postData['project_id']);
