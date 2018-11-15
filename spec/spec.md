@@ -68,3 +68,6 @@ Nom du champ pour l'addresse email: email
 Nom du champ pour le nom: lastname
 Nom du champ pour le prénom: firstname
 ![MaquetteRegistration](registration.png "Maquette de la page d'inscription")
+
+# Stockage des mot de passes
+Hachage des mots de passe avec l'algorithme Argon2
