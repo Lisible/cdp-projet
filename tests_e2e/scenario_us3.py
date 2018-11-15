@@ -28,9 +28,9 @@ elem = driver.find_element_by_id("date-input")
 elem.click()
 driver.execute_script("document.querySelector('input[type=\"date\"]').valueAsDate = new Date('07/12/2019')")
 
-elem = driver.find_element(By.XPATH, '//button[@type="submit"]')
-elem.click()
-        
+elem = driver.find_element(By.XPATH, '//form')
+elem.submit()
+driver.get("http://localhost/project_list.php")
 assert "Liste des projets" in driver.title
 elems = driver.find_elements(By.XPATH, '//li/span[text()="TestProject"]')
 assert len(elems) > 0
