@@ -44,7 +44,13 @@ Nom du fichier: project_list.php
 Id du du lien permettant d'accéder à la page de création de projet: "add_project_link"
 
 # Base de données
+
+## Sprint 1
 ![MLD](MLD_sprint1.png "Modèle logique des données pour le sprint 1")
+
+## Sprint 2
+![MCDS2](MCD_sprint2.png "Modèle conceptuel des données pour le sprint 2")
+![MLDS2](MLD_sprint2.png "Modèle logique des données pour le sprint 2")
 
 # DAO
 Les fonctions du fichier DAO.php seront:
