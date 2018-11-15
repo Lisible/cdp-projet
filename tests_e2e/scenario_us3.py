@@ -12,10 +12,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 driver = webdriver.Firefox()
 driver.get("http://localhost/project_list.php")
-assert "Liste des projets" in driver.title
 elem = driver.find_element_by_id("add_project_link")
 elem.click()
-assert "Ajouter un projet" in driver.title
 elem = driver.find_element_by_id("name-input")
 elem.click()
 elem.send_keys("TestProject")
