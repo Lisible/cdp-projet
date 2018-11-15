@@ -23,7 +23,7 @@ new class extends Controller {
         $us->setPriority($postData['priority']);
         DAO::createUserStory($us);
 
-        header("Location: list_backlog.php");
-       // $this->render('list_backlog');
+        header("Location: list_backlog.php?project_id=".$postData['project_id']);
+      //$this->render('list_backlog');
     }
 };
