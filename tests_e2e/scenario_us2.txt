@@ -1,0 +1,9 @@
+Depuis la page d'accueil:
+Cliquer sur le lien "Inscription"
+Constater la redirection vers la page du formulaire d'inscription
+Saisir les champs identifiants, mot de passe, adresse email, nom et prénom.
+Cliquer sur le bouton "Confirmer"
+
+Constater la redirection vers la page d'accueil
+Constater la présence du message "Votre compte a été créé"
+

@@ -1,0 +1,6 @@
+Depuis la page d'accueil:
+Saisir son login dans le champ "Login"
+Saisir son mot de passe dans le champ "Mot de passe"
+Cliquer sur le bouton "Connexion"
+
+Constater la redirection vers la page de la liste des projets de l'utilisateur

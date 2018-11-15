@@ -1,0 +1,5 @@
+Connecté, sur la page de la liste des projets:
+Cliquer sur le bouton "Déconnexion"
+
+Constater la redirection vers la page d'accueil.
+Constater la présence du message "Utilisateur déconnecté"
