@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="date-input" class="col-2 col-form-label">Date
+            <label for="date-input" class="col-2 col-form-label">Date de début du projet
                 <span>&#10033;</span>
             </label>
             <div class="col-10">
