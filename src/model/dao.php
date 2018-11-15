@@ -43,6 +43,25 @@ class DAO
 
 		return $projects;
 	}
+
+	public static function getProjectById($projectId)
+    {
+        $project = null;
+
+        try {
+            $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+            $sqlQuery = 'SELECT * FROM Project WHERE projectId = ?;';
+            $statement = $pdo->prepare($sqlQuery);
+            $statement->execute(array($projectId));
+            $queryResult = $statement->fetch();
+            $project = self::createProjectFromQueryResult($queryResult);
+        }
+        catch (\PDOException $e) {
+            die($e);
+        }
+
+        return $project;
+    }
 	
 	public static function createUserStory($userStory) 
 	{
