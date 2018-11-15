@@ -58,4 +58,13 @@ UserStory[] getUserStories($projectId);
 Chemin du fichier: index.php
 Nom du champ de login: 'username'
 Nom du champ de mot de passe: 'password'
-![MaquetteIndex](Index.png "Maquette de la page d'index")
+![MaquetteIndex](index.png "Maquette de la page d'index")
+
+# Page d'inscription
+Chemin du fichier: registration.php
+Nom du champ pour l'identifiant: username
+Nom du champ pour le mot de passe: password
+Nom du champ pour l'addresse email: email
+Nom du champ pour le nom: lastname
+Nom du champ pour le prénom: firstname
+![MaquetteRegistration](registration.png "Maquette de la page d'inscription")
