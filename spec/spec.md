@@ -54,3 +54,8 @@ Project[] getProjects();
 void createUserStory($userStory);
 UserStory[] getUserStories($projectId);
 ```
+# Page d'accueil
+Chemin du fichier: index.php
+Nom du champ de login: 'username'
+Nom du champ de mot de passe: 'password'
+![MaquetteIndex](Index.png "Maquette de la page d'index")
