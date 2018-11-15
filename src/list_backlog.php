@@ -9,6 +9,7 @@
     }
 
     public function onGet($getData){
+      $this->setData('project_id', $getData['project_id']);
       $this->setData('backlog', DAO::getUserStories($getData['project_id']));
       $this->render('list_backlog_view');
     }

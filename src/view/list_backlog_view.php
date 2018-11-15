@@ -1,4 +1,4 @@
-<a href="add_user_story.php" id="add_user_story_link">+</a>
+<a href=" <?php echo'add_user_story.php?project_id='.$DATA['project_id']; ?>" id="add_user_story_link">+</a>
 
 <?php 
 	if($DATA['backlog'] != null): ?>
