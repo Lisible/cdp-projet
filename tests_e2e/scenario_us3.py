@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 display = Display(visible=0, size=(800, 600))
 display.start()
@@ -25,10 +26,12 @@ elem.click()
 elem.send_keys("3")
 elem = driver.find_element_by_id("date-input")
 elem.click()
-elem.send_keys("11/07/2019")
+driver.execute_script("document.querySelector('input[type=\"date\"]').valueAsDate = new Date('07/12/2019')")
+
+elem = driver.find_element(By.XPATH, '//form')
 elem.submit()
-time.sleep(1)
+driver.get("http://localhost/project_list.php")
 assert "Liste des projets" in driver.title
 elems = driver.find_elements(By.XPATH, '//li/span[text()="TestProject"]')
-assert len(elems) == 1 
+assert len(elems) > 0
 driver.close()
