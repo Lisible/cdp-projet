@@ -67,12 +67,12 @@ class DAO
 	{
 		try {
 			$pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
-			$sqlQuery = 'INSERT INTO Issue(issueName, issueDescription, issuePriority, issueDifficulty, projectId) VALUES(?,?,?,?,?);';
+			$sqlQuery = 'INSERT INTO Issue(issueId, issueDescription, issuePriority, issueDifficulty, projectId) VALUES(?,?,?,?,?);';
 			$statement = $pdo->prepare($sqlQuery);
-			$statement->execute([$userStory->getName(), 
+			$statement->execute([$userStory->getId(), 
 								$userStory->getDescription(), 
-								$userStory->getSprintDuration(), 
-								$userStory->getBeginDate(),
+								$userStory->getPriority(), 
+								$userStory->getDifficulty(),
 								$userStory->getProjectId()]);
 		}
 		catch(\PDOException $e) {

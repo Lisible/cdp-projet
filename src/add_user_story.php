@@ -1,7 +1,7 @@
 <?php
 include_once('framework/controller.php');
 include_once('model/dao.php');
-include_once('model/project.php');
+include_once('model/user_story.php');
 
 new class extends Controller {
 
@@ -10,18 +10,20 @@ new class extends Controller {
     }
 
     public function onGet($getData) {
-        $this->render('add_user_story_view');
+       $this->setData('project_id', $getData['project_id']);
+       $this->render('add_user_story_view');
     }
 
     public function onPost($postData) {
         $us = new UserStory();
-        $us->setDifficulty($postData['nom']);
+        $us->setDifficulty($postData['difficulty']);
         $us->setDescription($postData['description']);
         $us->setId($postData['id']);
-        $us->setProjectId();
-        $us->setPriority($postData['priorite']);
+        $us->setProjectId($postData['project_id']);
+        $us->setPriority($postData['priority']);
         DAO::createUserStory($us);
 
-        $this->render('list_backlog');
+        header("Location: list_backlog.php");
+       // $this->render('list_backlog');
     }
 };
