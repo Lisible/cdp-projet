@@ -21,6 +21,6 @@ new class extends Controller {
         $project->setBeginDate(date("Y-m-d", $postData['date']));
         DAO::createProject($project);
 
-        $this->render('project_list');
+        header('Location: project_list.php');
     }
 };
