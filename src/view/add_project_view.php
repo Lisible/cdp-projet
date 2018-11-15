@@ -22,7 +22,7 @@
             </label>
             <div class="col-10">
                 <input class="form-control" type="number" name="duree" id="dureeSprint-input"
-                       placeholder="2 est par défault" required>
+                       placeholder="2 est par défault" min="1" required>
             </div>
         </div>
         <div class="form-group row">
