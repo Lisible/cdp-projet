@@ -18,7 +18,7 @@ new class extends Controller {
         $project->setName($postData['nom']);
         $project->setDescription($postData['description']);
         $project->setSprintDuration($postData['duree']);
-        $project->setBeginDate(date("Y-m-d", $postData['date']));
+        $project->setBeginDate(date("Y-m-d", strtotime($postData['date'])));
         DAO::createProject($project);
 
         header('Location: project_list.php');
