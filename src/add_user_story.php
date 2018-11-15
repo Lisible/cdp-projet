@@ -1,7 +1,7 @@
 <?php
 include_once('framework/controller.php');
 include_once('model/dao.php');
-include_once('model/project.php');
+include_once('model/user_story.php');
 
 new class extends Controller {
 
@@ -19,10 +19,11 @@ new class extends Controller {
         $us->setDifficulty($postData['diffuclty']);
         $us->setDescription($postData['description']);
         $us->setId($postData['id']);
-        $us->setProjectId();
+        $us->setProjectId($postData['project_id']);
         $us->setPriority($postData['priority']);
         DAO::createUserStory($us);
 
-        $this->render('list_backlog');
+        header("Lcoation: list_backlog.php");
+       // $this->render('list_backlog');
     }
 };
