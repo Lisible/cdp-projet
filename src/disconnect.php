@@ -7,8 +7,7 @@ new class extends Controller {
 	}
 
 	public function onGet($getData) {
-        unset($_SESSION['connected']);
-        unset($_SESSION['userId']);
+		session_destroy();
 
 		$this->redirect('index');
 	}
