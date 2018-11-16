@@ -49,6 +49,6 @@ driver.get("http://localhost/project_list.php")
 print(driver.title)
 assert "Liste des projets" in driver.title
 wait = WebDriverWait(driver, timeout=10)
-elems = driver.find_elements(By.XPATH, '//li/span[text()="TestProject"]')
+elems = driver.find_elements(By.XPATH, '//li/a[text()="TestProject"]')
 assert len(elems) > 0
 driver.close()
