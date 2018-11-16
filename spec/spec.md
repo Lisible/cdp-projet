@@ -83,6 +83,10 @@ Nom du fichier: add_user_to_project.php
 Nom du champ pour ajouter l'utilisateur: username
 Nom du bouton de validation: "Valider"
 
-# DESING DE LA PAGE D'ACCES AUX INFORMATIONS DES MEMBRES DEPUIS UN PROJET
-Nom du fichier: list_project_members.php
+# DESIGN DE LA PAGE D'ACCES AUX INFORMATIONS DES MEMBRES DEPUIS UN PROJET
+Nom du fichier: list_members_of_project.php
+Nom du bouton permettant de retourner à la liste des projets : "Retour"
+
+# DESIGN DE LA PAGE D'ACCES AUX SPRINTS D'UN PROJET
+Nom du fichier: list_sprints_of_project.php
 Nom du bouton permettant de retourner à la liste des projets : "Retour"
