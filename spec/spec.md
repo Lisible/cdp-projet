@@ -77,3 +77,8 @@ Nom du champ pour le prénom: firstname
 
 # Stockage des mot de passes
 Hachage des mots de passe avec l'algorithme Argon2
+
+# DESIGN DE LA PAGE D'AJOUT D'UN UTILISATEUR A UN PROJET
+Nom du fichier: add_user_to_project.php
+Nom du champ pour ajouter l'utilisateur: username
+Nom du bouton de validation: "Valider"
