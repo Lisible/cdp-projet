@@ -89,4 +89,5 @@ Nom du bouton permettant de retourner à la liste des projets : "Retour"
 
 # DESIGN DE LA PAGE D'ACCES AUX SPRINTS D'UN PROJET
 Nom du fichier: list_sprints_of_project.php
+Nom du bouton permettant d'ajouter un sprint à un projet : "Ajouter un sprint"
 Nom du bouton permettant de retourner à la liste des projets : "Retour"
