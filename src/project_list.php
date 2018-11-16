@@ -4,7 +4,12 @@ include_once('model/dao.php');
 
 new class extends Controller {
 
+	private $userId;
+
 	public function setup() {
+        $this->connectedCheck();
+		$userId = $_SESSION['userId'];
+
 		$this->setData('title', 'Liste des projets');
 	}
 

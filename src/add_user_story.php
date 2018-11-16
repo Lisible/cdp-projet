@@ -6,6 +6,8 @@ include_once('model/user_story.php');
 new class extends Controller {
 
     public function setup() {
+        $this->connectedCheck();
+
         $this->setData('title', "Création d'une user story");
     }
 
@@ -18,7 +20,7 @@ new class extends Controller {
         $us = new UserStory();
         $us->setDifficulty($postData['difficulty']);
         $us->setDescription($postData['description']);
-        $us->setId($postData['id']);
+        $us->setNumber($postData['number']);
         $us->setProjectId($postData['project_id']);
         $us->setPriority($postData['priority']);
         DAO::createUserStory($us);

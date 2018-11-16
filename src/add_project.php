@@ -5,7 +5,12 @@ include_once('model/project.php');
 
 new class extends Controller {
 
+    private $userId = 0;
+
     public function setup() {
+        $this->connectedCheck();
+
+        $this->userId = $_SESSION['userId'];
         $this->setData('title', 'Ajouter un projet');
     }
 
@@ -19,8 +24,8 @@ new class extends Controller {
         $project->setDescription($postData['description']);
         $project->setSprintDuration($postData['duree']);
         $project->setBeginDate(date("Y-m-d", strtotime($postData['date'])));
-        DAO::createProject($project);
+        DAO::createProject($this->userId, $project);
 
-        header('Location: project_list.php');
+        $this->redirect('project_list');
     }
 };

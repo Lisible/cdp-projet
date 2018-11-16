@@ -5,6 +5,8 @@ include_once('model/dao.php');
 new class extends Controller {
 
     public function setup() {
+        $this->connectedCheck();
+
         $this->setData('title', 'Les détails de ce projet :');
     }
 

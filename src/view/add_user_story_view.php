@@ -1,7 +1,7 @@
 <div class="container">
   <form role="form" method="POST" action="../add_user_story.php">
-      <label>ID* </label>
-      <input type="number" name="id" id="id_us" min="1" step="1" placeholder="Identifiant de l'US" required>
+      <label>Numéro* </label>
+      <input type="number" name="number" id="number_us" min="1" step="1" placeholder="Numéro de l'US" required>
       <br>
       <label>Difficulté*</label>
       <input type="number" name="difficulty" id="difficulty" min="1" step="1" placeholder="Difficulté de l'US" required>
@@ -16,7 +16,7 @@
                           placeholder="Description de votre US" required></textarea>
       <br>
       <input type="hidden" id="project_id" name="project_id" value="<?php echo $DATA['project_id']; ?>">
-     <button type="submit">Valider</input>
+     <button type="submit">Valider</button>
      <button type="button" onclick="window.location.href = '../list_backlog.php'">Annuler</button>
   </form>
 </div>

@@ -10,13 +10,15 @@ abstract class UserStoryPriority {
 
 class UserStory {
 	private $id;
+	private $number;
 	private $description;
     private $priority;
     private $difficulty;
     private $projectId;
 
 	function __construct(){
-		$this->id = -1;;
+		$this->id = -1;
+		$this->number = -1;
 		$this->description = '';
 		$this->priority = UserStoryPriority::VERY_LOW;
         $this->difficulty = 1;
@@ -28,6 +30,13 @@ class UserStory {
 	}
 	function getId(){
 		return $this->id;
+	}
+
+	function setNumber($number){
+		$this->number = $number;
+	}
+	function getNumber(){
+		return $this->number;
 	}
 
 	function getDescription(){

@@ -5,7 +5,7 @@
   <ul id="backlog-list">
   <?php foreach($DATA['backlog'] as $us): ?>
      <li>
-       <span><?php echo $us->getId() ?> </span>
+       <span><?php echo $us->getNumber() ?> </span>
        <span><?php echo $us->getDescription() ?> </span>
        <span><?php echo $us->getPriority() ?> </span>
        <span><?php echo $us->getDifficulty() ?> </span>

@@ -5,6 +5,8 @@
   new class extends Controller {
 
     public function setup() {
+      $this->connectedCheck();
+
       $this->setData('title', 'Liste des US');
     }
 

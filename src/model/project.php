@@ -6,6 +6,7 @@ class Project {
 	private $description;
 	private $sprintDuration;
 	private $beginDate;
+	private $ownerId;
 
 	function __construct(){
 		$this->id = -1;
@@ -13,6 +14,7 @@ class Project {
 		$this->description = '';
 		$this->sprintDuration = 2;
 		$this->beginDate = mktime(0,0,0,1,1,1970);
+		$this->ownerId = -1;
 	}
 
 	function setId($id){
@@ -48,5 +50,12 @@ class Project {
 	}
 	function setBeginDate($timestamp){
 		$this->beginDate = $timestamp;
+	}
+
+	function getOwnerId() {
+		return $this->ownerId;
+	}
+	function setOwnerId($ownerId) {
+		$this->ownerId = $ownerId;
 	}
 }
