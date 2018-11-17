@@ -1,0 +1,16 @@
+Depuis la page de la consultation d'un projet :
+
+#Scénario 1 : Il existe au moins un membre.
+Cliquer sur le bouton "Membres".
+Redirection vers la page d'accès aux informations des membres du projet.
+Constater qu'il existe au moins un membre.
+Vérifier son nom, prénom, mail.
+
+#Scénatio 2 : Il n'existe aucun membre.
+Cliquer sur le bouton "Membres".
+Redirection vers la page d'accès aux informations des membres du projet.
+Constater le message "Aucun membre".
+
+#Scénario 3 : Retourner à la page de la consultation du projet.
+Cliquer sur le bouton "Retour".
+Redirection vers la page de la consultation du projet.
