@@ -7,6 +7,7 @@ Description générale des composants de chacune des pages de notre projet.
 Nom du fichier du formulaire: add_user_story.php
 
 Nom du bouton de validation: "Valider"
+
 Nom du bouton d'annulation: "Annuler"
 
 c.f. la maquette pour les champs du formulaire
@@ -16,7 +17,9 @@ c.f. la maquette pour les champs du formulaire
 Nom du fichier: list_backlog.php
 
 Nom du bouton permettant d'ajouter une US: "Ajouter une User Story"
+
 Nom du bouton permettant de retourner sur la page du projet: "Retour"
+
 Nom du bouton permetttant de supprimer une US: "Supprimer"
 
 c.f. la maquette pour la disposition de la liste
@@ -92,30 +95,47 @@ Nom du fichier: list_members_of_project.php
 Nom du bouton permettant de retourner à la liste des projets : "Retour"
 
 # DESIGN DE LA PAGE D'ACCES AUX SPRINTS D'UN PROJET
+
 Nom du fichier: list_sprints_of_project.php
+
 Nom du bouton permettant d'ajouter un sprint à un projet : "Ajouter un sprint"
+
 Nom du bouton permettant de retourner à la liste des projets : "Retour"
 
 # DESIGN DE LA PAGE DES TACHES DANS UN SPRINT
- Nom du fichier: tasks_sprint.php
- Nom des différentes colonnes permettant de trier les tâches: "To do", "On going", "Done"
- Nom du bouton permettant d'ajouter une tâche: "Ajouter une tâche"
- Nom du bouton permettant de supprimer le une tâche: "Supprimer"
+
+Nom du fichier: tasks_sprint.php
+
+Nom des différentes colonnes permettant de trier les tâches: "To do", "On going", "Done"
+
+Nom du bouton permettant d'ajouter une tâche: "Ajouter une tâche"
+
+Nom du bouton permettant de supprimer le une tâche: "Supprimer"
  
 # DESIGN DU POP-UP DE SUPPRESSION D'UN SPRINT
- Nom du pop-up: "Confirmation de la suppresion du sprint"
- Message du pop-up: "Voulez-vous supprimer ce sprint? Cette action sera irréversible."
- Nom du bouton permettant de valider la suppression: "OK"
- Nom du bouton permettant d'annuler la suppression: "Annuler"
+
+Nom du pop-up: "Confirmation de la suppresion du sprint"
+
+Message du pop-up: "Voulez-vous supprimer ce sprint? Cette action sera irréversible."
+
+Nom du bouton permettant de valider la suppression: "OK"
+
+Nom du bouton permettant d'annuler la suppression: "Annuler"
  
 # DESIGN DU POP-UP D'ERREUR DE CONNEXION
- Nom du pop-up: "Erreur lors de la connexion"
- Message du pop-up: "Utilisateur ou mot de passe invalide/erroné. Veuillez réessayer."
- Nom du bouton permettant de fermer le pop-up: "OK"
+
+Nom du pop-up: "Erreur lors de la connexion"
+
+Message du pop-up: "Utilisateur ou mot de passe invalide/erroné. Veuillez réessayer."
+
+Nom du bouton permettant de fermer le pop-up: "OK"
  
 # DESIGN DU POP-UP D'ERREUR LORS DE L'INSCRIPTION
- Nom du pop-up: "Erreur lors de l'inscription"
- Message du pop-up: "Veuillez remplir la totalité des champs obligatoires."
- Nom du bouton permettant de fermer le pop-up: "OK"
+
+Nom du pop-up: "Erreur lors de l'inscription"
+
+Message du pop-up: "Veuillez remplir la totalité des champs obligatoires."
+
+Nom du bouton permettant de fermer le pop-up: "OK"
  
  
