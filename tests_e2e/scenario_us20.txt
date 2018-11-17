@@ -1,7 +1,5 @@
 Depuis la page de la liste des sprints d'un de mes projets:
-Cliquer sur le sprint que je souhaite supprimer
-Constater la redirection vers la page de description du sprint.
-Cliquer sur le bouton "supprimer le sprint".
+Cliquer sur le bouton "Supprimer" associé au sprint.
 Constater l'apparition d'un pop-up me demandant la confirmation de la suppression du sprint.
 Cliquer sur "OK".
 Constater la redirection vers la page de la liste des sprints du projet.
