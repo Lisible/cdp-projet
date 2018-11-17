@@ -7,11 +7,11 @@ Index
 <form action="index.php" method="POST">
     <div>
         <label for="username">Nom d'utilisateur:</label>
-        <input name="username" type="text">
+        <input name="username" type="text" required>
     </div>
     <div>
         <label for="password">Mot de passe:</label>
-        <input name="password" type="password">
+        <input name="password" type="password" required>
     </div>
 
     <input type="submit" value="Connexion">
