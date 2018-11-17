@@ -1,0 +1,15 @@
+Depuis la page d'accès aux sprints d'un projet :
+
+#Scénario 1 : Le sprint est ajouté à la liste de sprints du projet.
+Cliquer sur le bouton "Ajouter un sprint"
+Redirection vers la page d'accès aux sprint du projet.
+Le "Sprint $id" sera présant dans la liste avec $id = numéro du sprint étant auto incrémenté.
+
+Exemple :
+Si dans la liste de sprints on avait : Sprint 1, Sprint 2.
+Le bouton "Ajouter un sprint" doit créer le Sprint 3 dans la liste.
+
+#Scénario 2 : L'utilisateur annule l'ajout d'un sprint à son projet.
+Cliquer sur le bouton "Retour".
+Redirection vers la page d'accès aux sprint du projet.
+Aucun Sprint est inséré dans la liste de sprints.
