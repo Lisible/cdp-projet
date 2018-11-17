@@ -9,6 +9,7 @@
        <span><?php echo $us->getDescription() ?> </span>
        <span><?php echo $us->getPriority() ?> </span>
        <span><?php echo $us->getDifficulty() ?> </span>
+       <button onclick="SupprimerUS(<?php echo $us->getID()?>)">Supprimer</button>
      </li>
   <?php endforeach; ?>
   </ul>
@@ -16,3 +17,13 @@
 <?php if($DATA['backlog'] == null): ?>
   <span id="no-us">Aucune User story</span>
 <?php endif; ?>
+
+<script defer>
+  function SupprimerUS(id){
+    if(confirm("Voulez-vous vraiment supprimer cette US? cette action sera irréversible.")){
+      window.location.href = "delete_user_story.php?user_story_id="+id+"&project_id="+<?php echo $DATA['project_id']; ?>;   
+    } else {
+    }
+  }
+
+</script>

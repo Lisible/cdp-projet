@@ -64,7 +64,19 @@ class DAO
 
         return $project;
     }
-	
+
+        public static function deleteUserStory($userStoryId){
+          try {
+            $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+            $sqlQuery = 'DELETE FROM Issue WHERE issueId = ?;';
+            $statement = $pdo->prepare($sqlQuery);
+            $statement->execute(array($userStoryId));
+            }
+            catch (\PDOException $e) {
+              die($e);
+            }
+        }
+        
 	public static function createUserStory($userStory) 
 	{
 		try {
