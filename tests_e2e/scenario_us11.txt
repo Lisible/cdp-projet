@@ -1,0 +1,5 @@
+Depuis la page de présentation d'un sprint d'un de mes projets:
+
+Cliquez sur le bouton "Consulter l'avancement des tâches".
+Constater la redirection vers la page des tâches associées au sprint.
+Constater la répartition des tâches dans 3 colonnes: "To do", "On going" et "Done".
