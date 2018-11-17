@@ -111,16 +111,26 @@ Nom des différentes colonnes permettant de trier les tâches: "To do", "On goin
 Nom du bouton permettant d'ajouter une tâche: "Ajouter une tâche"
 
 Nom du bouton permettant de supprimer le une tâche: "Supprimer"
+
+# DESIGN DU POP-UP DE SUPPRESSION D'UNE USER STORY
+
+Message du pop-up: "Voulez-vous supprimer cette US? Cette action sera irréversible."
+
+Nom du bouton permettant de valider la suppression: "OK"
+
+Nom du bouton permettant d'annuler la suppression: "Annuler"
+
+Nom de la page gérant la suppression: delete_user_story.php
  
 # DESIGN DU POP-UP DE SUPPRESSION D'UN SPRINT
-
-Nom du pop-up: "Confirmation de la suppresion du sprint"
 
 Message du pop-up: "Voulez-vous supprimer ce sprint? Cette action sera irréversible."
 
 Nom du bouton permettant de valider la suppression: "OK"
 
 Nom du bouton permettant d'annuler la suppression: "Annuler"
+
+Nom de la page gérant la suppression: delete_sprint.php
  
 # DESIGN DU POP-UP D'ERREUR DE CONNEXION
 
@@ -131,8 +141,6 @@ Message du pop-up: "Utilisateur ou mot de passe invalide/erroné. Veuillez rées
 Nom du bouton permettant de fermer le pop-up: "OK"
  
 # DESIGN DU POP-UP D'ERREUR LORS DE L'INSCRIPTION
-
-Nom du pop-up: "Erreur lors de l'inscription"
 
 Message du pop-up: "Veuillez remplir la totalité des champs obligatoires."
 
