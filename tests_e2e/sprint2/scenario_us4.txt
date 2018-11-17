@@ -1,0 +1,22 @@
+Depuis la page de la consultation d'un projet :
+
+#Scénario 1 : Ajouter un utilisateur comme membre du projet.
+Cliquer sur le bouton "Ajouter un membre".
+Redirection vers la page d'ajout d'un utilisateur à un projet.
+Saisir l'identifiant de l'utilisateur qu'on souhaite ajouter.
+Cliquer sur le bouton "Valider".
+Redirection vers la page de consultation d'un projet.
+Constater que l'utilisateur a été bien ajouté dans la page d'accès aux informations des membres du projet.
+
+#Scénario 2 : Saisir un identifiant non valide pour un utilisateur qui n'existe pas.
+Cliquer sur le bouton "Ajouter un membre".
+Redirection vers la page d'ajout d'un utilisateur à un projet.
+Saisir l'identifiant de l'utilisateur qu'on souhaite ajouter.
+Cliquer sur le bouton "Valider".
+Afficher l'erreur correspondante à l'impossibilité d'ajout d'un utilisateur non existant.
+
+#Scénario 3 : Ne pas remplir le champ obligatoire "identifiant".
+Cliquer sur le bouton "Ajouter un membre".
+Redirection vers la page d'ajout d'un utilisateur à un projet.
+Cliquer sur le bouton "Valider".
+Afficher l'erreur correspondante à l'impossibilité de ne pas saisir le champ obligatoire "identifiant".
