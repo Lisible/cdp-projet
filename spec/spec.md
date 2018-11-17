@@ -95,3 +95,10 @@ Nom du bouton permettant de retourner à la liste des projets : "Retour"
 Nom du fichier: list_sprints_of_project.php
 Nom du bouton permettant d'ajouter un sprint à un projet : "Ajouter un sprint"
 Nom du bouton permettant de retourner à la liste des projets : "Retour"
+
+# DESIGN DE LA PAGE DES TACHES DANS UN SPRINT
+ Nom du fichier: tasks_sprint.php
+ Nom des différentes colonnes permettant de trier les tâches: "To do", "On going", "Done"
+ Nom du bouton permettant d'ajouter une tâche: "Ajouter une tâche"
+ Nom du bouton permettant de supprimer le une tâche: "Supprimer"
+ 
