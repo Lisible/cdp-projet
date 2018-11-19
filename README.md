@@ -9,9 +9,11 @@ et de suivre des projets logiciels.
 
 # Technologies utilisées
 
+**Environnement**: LAMP, depuis une image Docker.  
 **Front-end**: HTML5, Javascript, Bootstrap (CSS).  
 **Back-end**: PHP.   
 **BDD**: PDO, avec une base de données en MySQL gérable depuis PhpMyAdmin.  
+**Test E2E**: Python, testés depuis Travis avec Selenium HQ.  
 
 # Reste à faire
 
