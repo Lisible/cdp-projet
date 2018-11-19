@@ -4,6 +4,11 @@ Index
 <span><?php echo $DATA['errorMessage']; ?></span>
 <?php endif; ?>
 
+<?php if(isset($DATA['message'])): ?>
+<span><?php echo $DATA['message']; ?></span>
+<?php endif; ?>
+
+<a href="registration.php">Inscription</a>
 <form action="index.php" method="POST">
     <div>
         <label for="username">Nom d'utilisateur:</label>
