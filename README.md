@@ -7,6 +7,12 @@ Projet de Conduite de Projet
 Le but de ce projet est de développer une application Web permettant de gérer
 et de suivre des projets logiciels.
 
+# Technologies utilisées
+
+**Front-end**: HTML5, Javascript, Bootstrap (CSS).  
+**Back-end**: PHP.   
+**BDD**: PDO, avec une base de données en MySQL gérable depuis PhpMyAdmin.  
+
 # Reste à faire
 
 Les tâches qui doivent être implémentées seront représentées par des notes dans l'onglet 'Projects' du dépôt. Elles seront dans la colonne 'To do', et les tâches en cours d'implémentation seront épinglées dans la colonne 'On going'.
@@ -15,6 +21,16 @@ Les tâches qui doivent être implémentées seront représentées par des notes
 
 Pour qu'une tâche soit finie d'être implémentée, le développeur doit s'assurer du bon fonctionnement de cette dernière et vérifier la robustesse de son code avec des tests unitaires couvrant au minimum 80% du code. Une fois les tests implémentés, le développeur doit déplacer la tâche du kanban de l'onglet 'Projects' du dépôt de la colonne 'On going' vers la colonne 'Done'.
 Il peut également renseigner le commit indiquant les dernières modifications impliquant la tâche, permettant ainsi de se retrouver dans de future révision. Une fois la totalité de ces actions faites, la tâche est finie d'être implémentée.
+
+# Arborescence du projet
+
+Notre projet suivra le pattern Model View Controller (MVC). L'arborescence des fichiers sources se présentera comme suit:
+
+**/cdp-projet/src**: Racine du projet. Contient les fichiers sources des différents contrôleurs auxiliaires.  
+**/cdp-projet/src/template**: Contient les fichiers permettant de définir les entêtes et les bas de pages.   
+**/cdp-projet/src/framework**: Contient les fichiers du contrôleur principal.   
+**/cdp-projet/src/model**: Contient les fichiers des différents modèles. Il y aura un modèle par table dans la base de données.   
+**/cdp-projet/src/view**: Contient les fichiers permettant de gérer la vue (coté client).   
 
 # Les issues (le Backlog)
 | ID | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Difficulté | Priorité | 
