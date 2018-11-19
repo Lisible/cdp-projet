@@ -7,6 +7,15 @@ Projet de Conduite de Projet
 Le but de ce projet est de développer une application Web permettant de gérer
 et de suivre des projets logiciels.
 
+# Reste à faire
+
+Les tâches qui doivent être implémentées seront représentées par des notes dans l'onglet 'Projects' du dépôt. Elles seront dans la colonne 'To do', et les tâches en cours d'implémentation seront épinglées dans la colonne 'On going'.
+
+# Définition of Done
+
+Pour qu'une tâche soit finie d'être implémentée, le développeur doit s'assurer du bon fonctionnement de cette dernière et vérifier la robustesse de son code avec des tests unitaires couvrant au minimum 80% du code. Une fois les tests implémentés, le développeur doit déplacer la tâche du kanban de l'onglet 'Projects' du dépôt de la colonne 'On going' vers la colonne 'Done'.
+Il peut également renseigner le commit indiquant les dernières modifications impliquant la tâche, permettant ainsi de se retrouver dans de future révision. Une fois la totalité de ces actions faites, la tâche est finie d'être implémentée.
+
 # Les issues (le Backlog)
 | ID | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Difficulté | Priorité | 
 |----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|----------| 
@@ -38,6 +47,7 @@ et de suivre des projets logiciels.
 | 26 | En tant qu'utilisateur, je souhaite pouvoir ajouter une release d'un projet dont je suis membre en informant la version de la release (50 caractères max., obligatoire), le changelog (500 caractères max., obligatoire), et un lien de téléchargement (255 caractères max., obligatoire) permettant d'accèder à la release afin d'informer le reste de mon équipe de la disponibilité et des fonctionnalités developpées de cette dernière.                                                                                  | 4         | Basse |
 | 27 | En tant qu'utilisateur, je souhaite pouvoir supprimer une release d'un projet dont je suis membre pour corriger une erreur de manipulation.                                                                                                                                                                                                                                                                                                                                                                | 3         | Basse |
 | 28 | En tant qu'utilisateur, je souhaite pouvoir corriger les informations concernant la release d'un projet dont je suis membre (c'est-à-dire le changelog, la version et/ou le lien de téléchargement).                                                                                                                                                                                                                                                                                                                                                                | 3         | Basse |
+
 
 
 
