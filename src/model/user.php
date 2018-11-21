@@ -7,39 +7,51 @@ class User {
     private $lastname;
     private $email;
 
-    function __construct($username, $firstname, $lastname, $email) {
-        $this->id = $id;
-        $this->username = $username;
-        $this->firstname = $firstname;
-        $this->lastname = $lastname;
-        $this->email = $email;
+    function __construct() {
+      $this->id = -1;
+      $this->username = "";
+      $this->firstname = "";
+      $this->lastname = "";
+      $this->email = "";
     }
 
-    private setUsername($username) {
+    public function setUsername($username) {
         $this->username = $username;
     }
-    private getUsername() {
+
+    public function getUsername() {
         return $this->username;
     }
 
-    private setFirstname($firstname) {
+    public function setFirstname($firstname) {
         $this->firstname = $firstname;
     }
-    private getFirstname() {
+
+    public function getFirstname() {
         return $this->firstname;
     }
 
-    private setLastname($lastname) {
+    public function setLastName($lastname) {
         $this->lastname = $lastname;
     }
-    private getLastname() {
+
+    public function getLastname() {
         return $this->lastname;
     }
 
-    private setEmail($email) {
-        $this->email = email;
+    public function setEmail($email) {
+        $this->email = $email;
     }
-    private getEmail() {
+
+    public function getEmail() {
         return $this->email;
+    }
+
+    public function getId() {
+        return $this->id;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
     }
 }
