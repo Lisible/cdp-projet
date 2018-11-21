@@ -1,5 +1,5 @@
 CREATE TABLE ApplicationUser (userId INT NOT NULL AUTO_INCREMENT,
-                   userUsername VARCHAR(50) NOT NULL,
+                   userUsername VARCHAR(50) NOT NULL UNIQUE,
                    userPasswordHash VARCHAR(255) NOT NULL,
                    userEmail VARCHAR(255) NOT NULL,
                    userFirstName VARCHAR(50) NOT NULL,
