@@ -169,8 +169,8 @@ class DAO
 			$pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
 			$sqlQuery = 'INSERT INTO ApplicationUser(userUsername, userPasswordHash, userEmail, userFirstName, userLastName) VALUES(?,?,?,?,?);';
 			$statement = $pdo->prepare($sqlQuery);
-			$statement->execute([$login, $hashedPassword, $email, $firstname, $lastname]);
-			return true;
+			$status = $statement->execute([$login, $hashedPassword, $email, $firstname, $lastname]);
+			return $status;
 		}
 		catch(\PDOException $e) {
 			var_dump($e);
