@@ -14,7 +14,7 @@
         $date = date_format($date, "d/m/Y");
         $html = '
         <a href="list_backlog.php?project_id= '. $id .'" class="btn btn-info" id="backlog-button">Backlogs</a>
-        <a href="#" class="btn btn-info">Sprints</a>
+        <a href="../list_sprints_of_project.php?project_id= '. $id .'" class="btn btn-info">Sprints</a>
         <a href="../add_user_to_project.php?project_id='. $id .'" class="btn btn-info">Ajouter un membre</a>
         <a href="#" class="btn btn-info">Membres</a>
         <div class="row">
