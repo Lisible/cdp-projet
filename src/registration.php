@@ -20,7 +20,7 @@ new class extends Controller {
 					 $postData['email']);
 		
 		if($created == true) {
-			$_SESSION['message'] = 'Compte créé avec succès';
+			$_SESSION['message'] = 'Votre compte a été créé';
 		}
 		else {
 			$_SESSION['error_message'] = 'Erreur lors de la création du compte';
