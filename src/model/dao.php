@@ -109,6 +109,25 @@ class DAO
         return $sprints;
     }
 
+    public static function addSprintToProject($projectId) {
+        try {
+            $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+            $sqlQueryCount = 'SELECT count(*) FROM ProjectSprint WHERE projectId = ?;';
+            $statementCount = $pdo->prepare($sqlQueryCount);
+            $statementCount->execute([$projectId]);
+            $sprintIdToInsert = $statementCount->fetchColumn();
+            $sprintIdToInsert++;
+
+            $sqlQuery = 'INSERT INTO ProjectSprint(projectId, sprintId)
+                         VALUES(?, ?);';
+            $statement = $pdo->prepare($sqlQuery);
+            $statement->execute([$projectId, $sprintIdToInsert]);
+        }
+        catch (\PDOException $e) {
+            die($e);
+        }
+    }
+
     public static function deleteUserStory($userStoryId){
       try {
         $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
