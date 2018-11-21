@@ -88,17 +88,38 @@ class DAO
         return $project;
     }
 
-        public static function deleteUserStory($userStoryId){
-          try {
+    public static function getSprintsByProjectId($projectId) {
+	    $sprints = [];
+
+        try {
             $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
-            $sqlQuery = 'DELETE FROM Issue WHERE issueId = ?;';
+            $sqlQuery = 'SELECT * FROM ProjectSprint WHERE projectId = ?;';
             $statement = $pdo->prepare($sqlQuery);
-            $statement->execute(array($userStoryId));
-            }
-            catch (\PDOException $e) {
-              die($e);
+            $statement->execute(array($projectId));
+            $queryResults = $statement->fetchAll();
+
+            foreach($queryResults as $queryResult){
+                array_push($sprints, $queryResult['sprintId']);
             }
         }
+        catch (\PDOException $e) {
+            die($e);
+        }
+
+        return $sprints;
+    }
+
+    public static function deleteUserStory($userStoryId){
+      try {
+        $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+        $sqlQuery = 'DELETE FROM Issue WHERE issueId = ?;';
+        $statement = $pdo->prepare($sqlQuery);
+        $statement->execute(array($userStoryId));
+        }
+        catch (\PDOException $e) {
+          die($e);
+        }
+    }
         
 	public static function createUserStory($userStory) 
 	{
