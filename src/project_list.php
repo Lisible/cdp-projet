@@ -8,13 +8,13 @@ new class extends Controller {
 
 	public function setup() {
         $this->connectedCheck();
-		$userId = $_SESSION['userId'];
+		$this->userId = $_SESSION['userId'];
 
 		$this->setData('title', 'Liste des projets');
 	}
 
 	public function onGet($getData) {
-		$this->setData('projects', DAO::getProjects());
+		$this->setData('projects', DAO::getProjectsByOwnerId($this->userId));
 		$this->render('project_list_view');
 	}
 
