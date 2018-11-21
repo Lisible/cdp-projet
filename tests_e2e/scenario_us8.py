@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import time
 from pyvirtualdisplay import Display
 from selenium import webdriver
