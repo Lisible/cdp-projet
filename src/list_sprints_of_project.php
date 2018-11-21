@@ -17,6 +17,9 @@ new class extends Controller {
     }
 
     public function onPost($postData){
-        $this->render('list_sprints_of_project_view');
+        $projectId = $postData['project_id'];
+        DAO::addSprintToProject($projectId);
+
+        header("Location: list_sprints_of_project.php?project_id=$projectId");
     }
 };
