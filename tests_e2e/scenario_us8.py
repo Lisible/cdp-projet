@@ -15,4 +15,9 @@ driver.get("http://localhost/project_list.php")
 wait = webDriverWait(driver, timeout=10)
 assert "Liste des projets" in driver.title
 
+elem = driver.find_element_by_id("project-backlog")
+elem.click()
+wait = webDriverWait(driver, timeout=10)
+assert "Liste des US" in driver.title
+
 driver.close()
