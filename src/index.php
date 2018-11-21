@@ -12,6 +12,11 @@ new class extends Controller
 			$this->setData('errorMessage', $_SESSION['error_message']);
 			unset($_SESSION['error_message']);
 		}
+
+		if(isset($_SESSION['message'])) {
+			$this->setData('message', $_SESSION['message']);
+			unset($_SESSION['message']);
+		}
 	}
 
 	public function onGet($getData) {
@@ -23,10 +28,8 @@ new class extends Controller
 		{
 			$this->redirect('project_list');
 		}
-                else {
-                  echo '<script type="text/javascript">window.alert("erreur lors de la connection.");</script>';
-                }
-
+		
+		$this->setData('errorMessage', 'La connexion a échouée');
 		$this->render('index_view');
 	}
 };

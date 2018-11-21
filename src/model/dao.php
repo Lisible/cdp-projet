@@ -165,7 +165,17 @@ class DAO
 	public static function createUser($login, $password, $firstname, $lastname, $email) {
 		$hashedPassword = DAO::hashPassword($password);
 
-		/// TODO
+		try {
+			$pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+			$sqlQuery = 'INSERT INTO ApplicationUser(userUsername, userPasswordHash, userEmail, userFirstName, userLastName) VALUES(?,?,?,?,?);';
+			$statement = $pdo->prepare($sqlQuery);
+			$statement->execute([$login, $hashedPassword, $email, $firstname, $lastname]);
+			return true;
+		}
+		catch(\PDOException $e) {
+			var_dump($e);
+			return false;
+		}
 	}
 
 	private static function hashPassword($password) {
