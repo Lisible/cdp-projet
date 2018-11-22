@@ -10,7 +10,7 @@ if($sprints != null): ?>
         <?php foreach($sprints as $sprint): ?>
             <li class="list-group-item">
               <span><?php echo "Sprint $sprint"; ?></span>
-              <span><button type="button" class="btn btn-danger" onclick="SupprimerSprint(<?php echo $sprint; ?>, <?php echo $project_id ?>);">Supprimer</button></span>
+              <span><button type="button" class="btn btn-danger" id="delete-sprint-button" onclick="SupprimerSprint(<?php echo $sprint; ?>, <?php echo $project_id ?>);">Supprimer</button></span>
             </li>
         <?php endforeach; ?>
     </ul>
