@@ -41,11 +41,10 @@ elem.send_keys('email1@email.fr')
 
 elem = driver.find_element(By.XPATH, '//button[@type=\"submit\"]')
 elem.click()
-
 wait = WebDriverWait(driver, timeout=10)
 assert "Index" in driver.title
 
-elems = driver.find_elements(By.XPATH, ('//span[text() = "Votre compte a été créé"]').decode('utf-8'))
+elems = driver.find_elements(By.XPATH, '//span[text() = "Votre compte a été créé"]')
 assert len(elems) > 0
 
 print("teste2e for US2: done.")

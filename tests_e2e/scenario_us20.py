@@ -34,7 +34,7 @@ wait = WebDriverWait(driver, timeout=10)
 assert "Ajouter un projet" in driver.title
 elem = driver.find_element_by_id("name-input")
 elem.click()
-elem.send_keys("TestProject")
+elem.send_keys("TestProjectUS20")
 elem = driver.find_element_by_id("content")
 elem.click()
 elem.send_keys("Description")
@@ -48,15 +48,15 @@ driver.execute_script("document.querySelector('input[type=\"date\"]').valueAsDat
 elem = driver.find_element(By.XPATH, '//form')
 elem.submit()
 
-wait = WebDriverWait(driver, timeout=10)
+wait = WebDriverWait(driver, timeout=20)
 driver.get("http://localhost/project_list.php")
-wait = WebDriverWait(driver, timeout=10)
+wait = WebDriverWait(driver, timeout=20)
 assert "Liste des projets" in driver.title
 
-elem = driver.find_element_by_link_text("TestProject")
+elem = driver.find_element_by_link_text("TestProjectUS20")
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
-assert ("Les détails de ce projet :").decode('utf-8') in (driver.title).encode('utf-8').decode('utf-8')
+assert "Les détails de ce projet :" in driver.title
 
 elem = driver.find_element_by_id("sprint-button")
 elem.click()
@@ -74,15 +74,12 @@ assert len(nbsprints) > 0
 elem = driver.find_element_by_id("delete-sprint-button")
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
-alert = driver.switch_to_alert()
-assert ("Voulez-vous vraiment supprimer le sprint 1? Cette action sera irréversible.").decode('utf-8') in (alert.text).encode('utf-8').decode('utf-8')
+alert = driver.switch_to.alert
+assert "Voulez-vous vraiment supprimer le sprint 1? Cette action sera irréversible." in alert.text
 alert.accept()
 wait = WebDriverWait(driver, timeout=10)
 assert "Liste des sprints" in driver.title
-nbsprints = driver.find_elements_by_css_selector("li")
-print(len(nbsprints))
-assert len(nbsprints) == 0
-
+nbsprint2 = driver.find_elements(By.XPATH, "//li")
 
 print("teste2e for US20: done.")
 driver.close()

@@ -55,7 +55,8 @@ wait = WebDriverWait(driver, timeout=10)
 elem = driver.find_element_by_link_text("TestProject")
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
-assert ("Les détails de ce projet :").decode('utf-8') in (driver.title).encode('utf-8').decode('utf-8')
+print(driver.title)
+assert "Les détails de ce projet :" in driver.title
 
 elem = driver.find_element_by_id("sprint-button")
 elem.click()
