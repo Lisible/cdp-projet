@@ -30,4 +30,7 @@ elem.click()
 wait = webDriverWait(driver, timeout=10)
 assert "Liste des sprints" in driver.title
 
+nbsprints = driver.find_elements_by_css_selector("li")
+assert len(nbsprints) > 0
+
 driver.close();
