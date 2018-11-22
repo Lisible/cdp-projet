@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import time
-import os
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -29,7 +28,7 @@ elem.click()
 elem = driver.find_element_by_id("add_project_link")
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
-print(driver.title)
+
 assert "Ajouter un projet" in driver.title
 elem = driver.find_element_by_id("name-input")
 elem.click()
@@ -49,7 +48,7 @@ elem.submit()
 
 wait = WebDriverWait(driver, timeout=10)
 driver.get("http://localhost/project_list.php")
-print(driver.title)
+
 assert "Liste des projets" in driver.title
 wait = WebDriverWait(driver, timeout=10)
 
