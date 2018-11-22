@@ -9,6 +9,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+print("teste2e for US11 starting... ")
+
 display = Display(visible=0, size=(800, 600))
 display.start()
 
@@ -69,4 +71,5 @@ assert "Liste des sprints" in driver.title
 nbsprints = driver.find_elements_by_css_selector("li")
 assert len(nbsprints) > 0
 
+print("teste2e for US11: done.")
 driver.close()

@@ -7,6 +7,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+print("teste2e for US14 starting... ")
+
 display = Display(visible=0, size=(800, 600))
 display.start()
 
@@ -26,4 +28,6 @@ elem = driver.find_element(By.XPATH, '//a[@href=\"disconnect.php\"]')
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
 assert "Index" in driver.title
+
+print("teste2e for US14: done.")
 driver.close()

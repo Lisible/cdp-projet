@@ -7,6 +7,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+print("teste2e for US3 starting... ")
+
 display = Display(visible=0, size=(800, 600))
 display.start()
 
@@ -51,4 +53,6 @@ assert "Liste des projets" in driver.title
 wait = WebDriverWait(driver, timeout=10)
 elems = driver.find_elements(By.XPATH, '//li/a[text()="TestProject"]')
 assert len(elems) > 0
+
+print("teste2e for US3: done.")
 driver.close()

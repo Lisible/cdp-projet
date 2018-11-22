@@ -8,6 +8,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+print("teste2e for US8 starting... ")
+
 display = Display(visible=0, size=(800,600))
 display.start()
 driver = webdriver.Firefox()
@@ -65,5 +67,6 @@ assert "Liste des US" in driver.title
 elems = driver.find_elements_by_css_selector("li")
 assert len(elems) > 0
 
+print("teste2e for US20: done.")
 print("all tests are done...")
 driver.close()
