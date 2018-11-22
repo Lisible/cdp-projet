@@ -23,12 +23,12 @@ elem.send_keys("root")
 elem = driver.find_element(By.XPATH, '//input[@type=\"submit\"]')
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
-print(driver.title)
+
 assert "Liste des projets" in driver.title
 elem = driver.find_element_by_id("add_project_link")
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
-print(driver.title)
+
 assert "Ajouter un projet" in driver.title
 elem = driver.find_element_by_id("name-input")
 elem.click()
@@ -48,7 +48,7 @@ elem.submit()
 
 wait = WebDriverWait(driver, timeout=10)
 driver.get("http://localhost/project_list.php")
-print(driver.title)
+
 assert "Liste des projets" in driver.title
 wait = WebDriverWait(driver, timeout=10)
 elems = driver.find_elements(By.XPATH, '//li/a[text()="TestProject"]')
