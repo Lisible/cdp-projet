@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import time
 from pyvirtualdisplay import Display
 from selenium import webdriver
@@ -14,17 +13,17 @@ display.start()
 
 driver = webdriver.Firefox()
 driver.get("http://localhost/project_list.php")
-wait = webDriverWait(driver, timeout=10)
+wait = WebDriverWait(driver, timeout=10)
 assert "Liste des projets" in driver.title
 
 elem = driver.find_element_by_id("project-backlog")
 elem.click()
-wait = webDriverWait(driver, timeout=10)
+wait = WebDriverWait(driver, timeout=10)
 assert "Liste des US" in driver.title
 
 elem = driver.find_element_by_id("add_user_story_link")
 elem.click()
-wait = webDriverWait(driver, timeout=10)
+wait = WebDriverWait(driver, timeout=10)
 assert "Création d'une user stroy" in driver.title
 
 elem = driver.find_element_by_id("number_us")
@@ -47,12 +46,12 @@ elem.submit()
 
 wait = WebDriverWait(driver, timeout=10)
 driver.get("http://localhost/project_list.php")
-wait = webDriverWait(driver, timeout=10)
+wait = WebDriverWait(driver, timeout=10)
 assert "Liste des projets" in driver.title
 
 elem = driver.find_element_by_id("project-backlog")
 elem.click()
-wait = webDriverWait(driver, timeout=10)
+wait = WebDriverWait(driver, timeout=10)
 assert "Liste des US" in driver.title
 elems = driver.find_elements_by_css_selector("li")
 assert len(elems) > 0
