@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 display = Display(visible=0, size=(800, 600))
 display.start()
 
-os.system("python scenario_us3.py")
+os.system("python test_e2e/scenario_us3.py")
 
 driver = webdriver.Firefox()
 driver.get("http://localhost/index.php")
