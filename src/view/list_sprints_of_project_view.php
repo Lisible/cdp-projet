@@ -9,7 +9,8 @@ if($sprints != null): ?>
     <ul class="list-group" id="sprint-list">
         <?php foreach($sprints as $sprint): ?>
             <li class="list-group-item">
-                <?php echo "Sprint $sprint"; ?>
+              <span><?php echo "Sprint $sprint"; ?></span>
+              <span><button type="button" class="btn btn-danger" onclick="SupprimerSprint(<?php echo $sprint; ?>, <?php echo $project_id ?>);">Supprimer</button></span>
             </li>
         <?php endforeach; ?>
     </ul>
@@ -36,4 +37,10 @@ if($sprints != null): ?>
 
         theForm.submit();
     });
+
+    function SupprimerSprint(id_sprint, id_project){
+      if(confirm("Voulez-vous vraiment supprimer le sprint "+id_sprint+"? Cette action sera irréversible.")){
+        window.location.href = "delete_sprint.php?sprint_id="+id_sprint+"&project_id="+id_project;
+      } else {}
+    }
 </script>

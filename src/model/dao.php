@@ -128,6 +128,18 @@ class DAO
         }
     }
 
+    public static function deleteSprint($sprintID, $projectID){
+      try {
+        $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+        $sqlQuery = 'DELETE FROM ProjectSprint WHERE projectId = ? AND sprintId = ?;';
+        $statement = $pdo->prepare($sqlQuery);
+        $statement->execute([$projectID, $sprintID]);
+      }
+      catch (\PDOException $e){
+        die($e);
+      }
+    }
+
     public static function deleteUserStory($userStoryId){
       try {
         $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
