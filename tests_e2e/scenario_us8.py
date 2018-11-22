@@ -67,6 +67,6 @@ assert "Liste des US" in driver.title
 elems = driver.find_elements_by_css_selector("li")
 assert len(elems) > 0
 
-print("teste2e for US20: done.")
+print("teste2e for US8: done.")
 print("all tests are done...")
 driver.close()
