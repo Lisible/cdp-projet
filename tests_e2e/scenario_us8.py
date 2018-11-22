@@ -10,9 +10,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 display = Display(visible=0, size=(800,600))
 display.start()
-
 driver = webdriver.Firefox()
-driver.get("http://localhost/project_list.php")
+driver.get("http://localhost/index.php")
+
+elem = driver.find_element(By.XPATH, '//input[@name=\"username\"]')
+elem.click()
+elem.send_keys("root")
+elem = driver.find_element(By.XPATH, '//input[@name=\"password\"]')
+elem.click()
+elem.send_keys("root")
+elem = driver.find_element(By.XPATH, '//input[@type=\"submit\"]')
+elem.click()
+
 wait = WebDriverWait(driver, timeout=10)
 assert "Liste des projets" in driver.title
 
