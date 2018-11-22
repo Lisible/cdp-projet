@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import time
+import os
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -10,6 +11,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 display = Display(visible=0, size=(800, 600))
 display.start()
+
+os.system("python scenario_us3.py")
 
 driver = webdriver.Firefox()
 driver.get("http://localhost/index.php")
