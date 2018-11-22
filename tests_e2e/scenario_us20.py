@@ -73,8 +73,12 @@ assert len(nbsprints) > 0
 
 elem = driver.find_element_by_id("delete-sprint-button")
 elem.click()
-assert "Voulez-vous vraiment supprimer le sprint 1? Cette action sera irréversible." in driver.switchTo().alert().getText()
-driver.switchTo().alert().accept()
+wait = WebDriverWait(driver, timeout=10)
+alert = driver.switch_to_alert().text
+assert ("Voulez-vous vraiment supprimer le sprint 1? Cette action sera irréversible.").decode('utf-8') in alert.encode('utf-8').decode('utf-8')
+alert.accept()
+wait = WebDriverWait(driver, timeout=10)
+assert "Liste des sprints" in driver.title
 nbsprints = driver.find_elements_by_css_selector("li")
 assert len(nbsprints) == 0
 
