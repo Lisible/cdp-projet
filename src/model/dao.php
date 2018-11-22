@@ -88,17 +88,69 @@ class DAO
         return $project;
     }
 
-        public static function deleteUserStory($userStoryId){
-          try {
+    public static function getSprintsByProjectId($projectId) {
+	    $sprints = [];
+
+        try {
             $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
-            $sqlQuery = 'DELETE FROM Issue WHERE issueId = ?;';
+            $sqlQuery = 'SELECT * FROM ProjectSprint WHERE projectId = ?;';
             $statement = $pdo->prepare($sqlQuery);
-            $statement->execute(array($userStoryId));
-            }
-            catch (\PDOException $e) {
-              die($e);
+            $statement->execute(array($projectId));
+            $queryResults = $statement->fetchAll();
+
+            foreach($queryResults as $queryResult){
+                array_push($sprints, $queryResult['sprintId']);
             }
         }
+        catch (\PDOException $e) {
+            die($e);
+        }
+
+        return $sprints;
+    }
+
+    public static function addSprintToProject($projectId) {
+        try {
+            $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+            $sqlQueryCount = 'SELECT count(*) FROM ProjectSprint WHERE projectId = ?;';
+            $statementCount = $pdo->prepare($sqlQueryCount);
+            $statementCount->execute([$projectId]);
+            $sprintIdToInsert = $statementCount->fetchColumn();
+            $sprintIdToInsert++;
+
+            $sqlQuery = 'INSERT INTO ProjectSprint(projectId, sprintId)
+                         VALUES(?, ?);';
+            $statement = $pdo->prepare($sqlQuery);
+            $statement->execute([$projectId, $sprintIdToInsert]);
+        }
+        catch (\PDOException $e) {
+            die($e);
+        }
+    }
+
+    public static function deleteSprint($sprintID, $projectID){
+      try {
+        $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+        $sqlQuery = 'DELETE FROM ProjectSprint WHERE projectId = ? AND sprintId = ?;';
+        $statement = $pdo->prepare($sqlQuery);
+        $statement->execute([$projectID, $sprintID]);
+      }
+      catch (\PDOException $e){
+        die($e);
+      }
+    }
+
+    public static function deleteUserStory($userStoryId){
+      try {
+        $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+        $sqlQuery = 'DELETE FROM Issue WHERE issueId = ?;';
+        $statement = $pdo->prepare($sqlQuery);
+        $statement->execute(array($userStoryId));
+        }
+        catch (\PDOException $e) {
+          die($e);
+        }
+    }
         
 	public static function createUserStory($userStory) 
 	{
@@ -165,7 +217,17 @@ class DAO
 	public static function createUser($login, $password, $firstname, $lastname, $email) {
 		$hashedPassword = DAO::hashPassword($password);
 
-		/// TODO
+		try {
+			$pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+			$sqlQuery = 'INSERT INTO ApplicationUser(userUsername, userPasswordHash, userEmail, userFirstName, userLastName) VALUES(?,?,?,?,?);';
+			$statement = $pdo->prepare($sqlQuery);
+			$status = $statement->execute([$login, $hashedPassword, $email, $firstname, $lastname]);
+			return $status;
+		}
+		catch(\PDOException $e) {
+			var_dump($e);
+			return false;
+		}
 	}
 
 	private static function hashPassword($password) {

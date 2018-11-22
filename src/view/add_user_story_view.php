@@ -17,6 +17,6 @@
       <br>
       <input type="hidden" id="project_id" name="project_id" value="<?php echo $DATA['project_id']; ?>">
      <button type="submit">Valider</button>
-     <button type="button" onclick="window.location.href = '../list_backlog.php'">Annuler</button>
+     <button type="button" onclick="window.location.href = '../list_backlog.php?project_id=<?php echo $DATA['project_id'];?>'">Annuler</button>
   </form>
 </div>

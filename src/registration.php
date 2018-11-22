@@ -13,7 +13,19 @@ new class extends Controller {
 	}
 
 	public function onPost($postData) {
-        $this->render('registration_view');
-        
+		$created = DAO::createUser($postData['username'], 
+					 $postData['password'], 
+					 $postData['firstname'], 
+					 $postData['lastname'], 
+					 $postData['email']);
+		
+		if($created == true) {
+			$_SESSION['message'] = 'Votre compte a été créé';
+		}
+		else {
+			$_SESSION['error_message'] = 'Erreur lors de la création du compte';
+		}
+
+		$this->redirect('index');
 	}
 };

@@ -1,5 +1,5 @@
 CREATE TABLE ApplicationUser (userId INT NOT NULL AUTO_INCREMENT,
-                   userUsername VARCHAR(50) NOT NULL,
+                   userUsername VARCHAR(50) NOT NULL UNIQUE,
                    userPasswordHash VARCHAR(255) NOT NULL,
                    userEmail VARCHAR(255) NOT NULL,
                    userFirstName VARCHAR(50) NOT NULL,
@@ -29,7 +29,12 @@ CREATE TABLE ProjectMember (projectId INT NOT NULL,
                             userId INT NOT NULL,
                             PRIMARY KEY (projectId, userId),
                             CONSTRAINT fkProjectMemberProject FOREIGN KEY (projectId) REFERENCES Project(projectId),
-                            CONSTRAINT fkProjectMemberUser FOREIGN KEY (userId) REFERENCES ApplicationUser(userId));                     
+                            CONSTRAINT fkProjectMemberUser FOREIGN KEY (userId) REFERENCES ApplicationUser(userId));
+
+CREATE TABLE ProjectSprint (projectId INT NOT NULL,
+                            sprintId INT NOT NULL,
+                            PRIMARY KEY (projectId, sprintId),
+                            CONSTRAINT fkProjectSprintProject FOREIGN KEY (projectId) REFERENCES Project(projectId));
 
 INSERT INTO ApplicationUser(userUsername, userPasswordHash, userEmail, userFirstName, userLastName)
 VALUES ('root', 

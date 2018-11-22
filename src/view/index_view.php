@@ -1,7 +1,8 @@
 Index
 
 <?php if(isset($DATA['errorMessage'])): ?>
-<span><?php echo $DATA['errorMessage']; ?></span>
+<!--<span><?php echo $DATA['errorMessage']; ?></span>--!>
+<script defer>alert("<?php echo $DATA['errorMessage'];  ?>");</script>
 <?php endif; ?>
 
 <?php if(isset($DATA['message'])): ?>
