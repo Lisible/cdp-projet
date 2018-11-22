@@ -22,5 +22,5 @@ before_install:
 
 script:
     - sleep 10
-    - ./tests_e2e/hello.sh
+    - ./tests_e2e/launcher.sh
     - cat geckodriver.log
