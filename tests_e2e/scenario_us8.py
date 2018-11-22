@@ -61,8 +61,8 @@ assert "Liste des US" in driver.title
 elem = driver.find_element_by_id("add_user_story_link")
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
-print((driver.title).encode('utf-8').decode('utf-8'))
-assert ("Création d'une user stroy").decode('utf-8') in (driver.title).encode('utf-8').decode('utf-8')
+
+assert ("Création d'une user story").decode('utf-8') in (driver.title).encode('utf-8').decode('utf-8')
 
 elem = driver.find_element_by_id("number_us")
 elem.click()
