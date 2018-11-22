@@ -24,14 +24,39 @@ elem.click()
 elem.send_keys("root")
 elem = driver.find_element(By.XPATH, '//input[@type=\"submit\"]')
 elem.click()
-
 wait = WebDriverWait(driver, timeout=10)
 assert "Liste des projets" in driver.title
 
-elem = driver.find_element_by_id("project-name")
+elem = driver.find_element_by_id("add_project_link")
 elem.click()
 wait = WebDriverWait(driver, timeout=10)
-assert ("Les détails de ce projet :").decode('utf-8') in (driver.title).encode('utf-8').decode('utf-8')
+
+assert "Ajouter un projet" in driver.title
+elem = driver.find_element_by_id("name-input")
+elem.click()
+elem.send_keys("TestProject")
+elem = driver.find_element_by_id("content")
+elem.click()
+elem.send_keys("Description")
+elem = driver.find_element_by_id("dureeSprint-input")
+elem.click()
+elem.send_keys("3")
+elem = driver.find_element_by_id("date-input")
+elem.click()
+driver.execute_script("document.querySelector('input[type=\"date\"]').valueAsDate = new Date('01/01/1111')")
+
+elem = driver.find_element(By.XPATH, '//form')
+elem.submit()
+
+wait = WebDriverWait(driver, timeout=10)
+driver.get("http://localhost/project_list.php")
+wait = WebDriverWait(driver, timeout=10)
+assert "Liste des projets" in driver.title
+
+elem = driver.find_element_by_link_text("TestProject")
+elem.click()
+wait = WebDriverWait(driver, timeout=10)
+assert ("Les détails de ce projet:").decode('utf-8') in (driver.title).encode('utf-8').decode('utf-8')
 
 elem = driver.find_element_by_id("backlog-button")
 elem.click()

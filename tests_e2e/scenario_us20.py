@@ -50,6 +50,8 @@ elem.submit()
 
 wait = WebDriverWait(driver, timeout=10)
 driver.get("http://localhost/project_list.php")
+wait = WebDriverWait(driver, timeout=10)
+assert "Liste des projets" in driver.title
 
 elem = driver.find_element_by_link_text("TestProject")
 elem.click()
@@ -74,7 +76,7 @@ elem.click()
 assert "Voulez-vous vraiment supprimer le sprint 1? Cette action sera irréversible." in driver.switchTo().alert().getText()
 driver.switchTo().alert().accept()
 nbsprints = driver.find_elements_by_css_selector("li")
-assert len(nbsprints) = 0
+assert len(nbsprints) == 0
 
 
 print("teste2e for US20: done.")
