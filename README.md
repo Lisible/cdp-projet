@@ -21,7 +21,7 @@ Les tâches qui doivent être implémentées seront représentées par des notes
 
 # Définition of Done
 
-Pour qu'une tâche soit finie d'être implémentée, le développeur doit s'assurer du bon fonctionnement de cette dernière et vérifier la robustesse de son code avec des tests unitaires couvrant au minimum 80% du code. Une fois les tests implémentés, le développeur doit déplacer la tâche du kanban de l'onglet 'Projects' du dépôt de la colonne 'On going' vers la colonne 'Done'.
+Pour qu'une tâche soit finie d'être implémentée, le développeur doit s'assurer du bon fonctionnement de cette dernière et vérifier la robustesse de son code. Une fois la vérification faîtes, le développeur doit déplacer la tâche du kanban de l'onglet 'Projects' du dépôt de la colonne 'On going' vers la colonne 'Done'.
 Il peut également renseigner le commit indiquant les dernières modifications impliquant la tâche, permettant ainsi de se retrouver dans de future révision. Une fois la totalité de ces actions faites, la tâche est finie d'être implémentée.
 
 # Arborescence du projet
