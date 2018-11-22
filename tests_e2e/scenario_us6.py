@@ -12,7 +12,7 @@ display = Display(visible=0, size=(800, 600))
 display.start()
 
 driver = webdriver.Firefox()
-driver.get("http://localhost/project_list.php")
+driver.get("http://localhost/index.php")
 
 elem = driver.find_element(By.XPATH, '//input[@name=\"username\"]')
 elem.click()
