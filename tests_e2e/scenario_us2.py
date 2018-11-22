@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import time
 from pyvirtualdisplay import Display
 from selenium import webdriver
@@ -44,7 +45,7 @@ elem.click()
 wait = WebDriverWait(driver, timeout=10)
 assert "Index" in driver.title
 
-elems = driver.find_elements(By.XPATH, '//span[text() = "Votre compte a été créé"]')
+elems = driver.find_elements(By.XPATH, ('//span[text() = "Votre compte a été créé"]').decode('utf-8'))
 assert len(elems) > 0
 
 print("teste2e for US2: done.")
