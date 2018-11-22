@@ -13,6 +13,15 @@ display.start()
 
 driver = webdriver.Firefox()
 driver.get("http://localhost/project_list.php")
+
+elem = driver.find_element(By.XPATH, '//input[@name=\"username\"]')
+elem.click()
+elem.send_keys("root")
+elem = driver.find_element(By.XPATH, '//input[@name=\"password\"]')
+elem.click()
+elem.send_keys("root")
+elem = driver.find_element(By.XPATH, '//input[@type=\"submit\"]')
+elem.click()
 wait = WebDriverWait(driver, timeout=10)
 assert "Liste des projets" in driver.title
 
