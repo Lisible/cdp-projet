@@ -14,6 +14,7 @@ display.start()
 driver = webdriver.Firefox()
 driver.get("http://localhost/project_list.php")
 wait = WebDriverWait(driver, timeout=10)
+print(driver.title)
 assert "Liste des projets" in driver.title
 
 elem = driver.find_element_by_id("project_name")
