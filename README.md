@@ -19,7 +19,7 @@ et de suivre des projets logiciels.
 
 Les tâches qui doivent être implémentées seront représentées par des notes dans l'onglet 'Projects' du dépôt. Elles seront dans la colonne 'To do', et les tâches en cours d'implémentation seront épinglées dans la colonne 'On going'.
 
-# Définition of Done
+# Definition of Done
 
 Pour qu'une tâche soit finie d'être implémentée, le développeur doit s'assurer du bon fonctionnement de cette dernière et vérifier la robustesse de son code. Une fois la vérification faîtes, le développeur doit déplacer la tâche du kanban de l'onglet 'Projects' du dépôt de la colonne 'On going' vers la colonne 'Done'.
 Il peut également renseigner le commit indiquant les dernières modifications impliquant la tâche, permettant ainsi de se retrouver dans de future révision. Une fois la totalité de ces actions faites, la tâche est finie d'être implémentée.
@@ -31,8 +31,11 @@ Notre projet suivra le pattern Model View Controller (MVC). L'arborescence des f
 **/cdp-projet/src**: Racine du projet. Contient les fichiers sources des différents contrôleurs auxiliaires.  
 **/cdp-projet/src/template**: Contient les fichiers permettant de définir les entêtes et les bas de pages.   
 **/cdp-projet/src/framework**: Contient les fichiers du contrôleur principal.   
-**/cdp-projet/src/model**: Contient les fichiers des différents modèles. Il y aura un modèle par table dans la base de données.   
+**/cdp-projet/src/model**: Contient les fichiers des différents modèles. Il y aura un modèle par table dans la base de données.
 **/cdp-projet/src/view**: Contient les fichiers permettant de gérer la vue (coté client).   
+**/cdp-projet/tests_e2e**: Contient les fichiers des tests d'intégration.  
+**/cdp-projet/spec**: Contient les différents fichiers liés aux tâches de spécification.  
+**/cdp-projet/doc**: Contient les guides d'installation du projet.  
 
 # Les issues (le Backlog)
 | ID | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Difficulté | Priorité | 
