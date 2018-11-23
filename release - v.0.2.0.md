@@ -7,6 +7,7 @@ Le script docker se charge d'installer automatiquement la base de données requi
 - Extraire l'archive
 - Exécuter ``sudo docker-compose up`` à la racine du répertoire extrait
 - Accéder à http://localhost/
+- Se connecter avec le login/mot de passe root/root ou utiliser le formulaire d'inscription
 
 # La liste des Issues provenant du sprint précédent:
 * Issue#6  
