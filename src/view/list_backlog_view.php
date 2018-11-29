@@ -9,7 +9,7 @@
        <span><?php echo $us->getDescription() ?> </span>
        <span><?php echo $us->getPriority() ?> </span>
        <span><?php echo $us->getDifficulty() ?> </span>
-       <button onclick="SupprimerUS(<?php echo $us->getID()?>)">Supprimer</button>
+       <button onclick="SupprimerUS(<?php echo $us->getID()?>)" id="delete-us-<?php echo $us->getNumber()?>">Supprimer</button>
      </li>
   <?php endforeach; ?>
   </ul>
