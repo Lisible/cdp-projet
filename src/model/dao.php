@@ -289,6 +289,30 @@ class DAO
         }
     }
 
+    public static function getMembersByProjectId($projectId) {
+        $members = [];
+
+        try {
+            $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+            $sqlQuery = 'SELECT * FROM 
+                          (ProjectMember INNER JOIN ApplicationUser ON ApplicationUser.userId=ProjectMember.userId) 
+                          WHERE projectId = ?;';
+            $statement = $pdo->prepare($sqlQuery);
+            $statement->execute(array($projectId));
+            $queryResults = $statement->fetchAll();
+
+            foreach($queryResults as $queryResult){
+                $member = self::createUserFromQueryResult($queryResult);
+                array_push($members, $member);
+            }
+        }
+        catch (\PDOException $e) {
+            die($e);
+        }
+
+        return $members;
+    }
+
 	private static function createProjectFromQueryResult($queryResult) {
 		$project = new Project();
 		$project->setId($queryResult['projectId']);
