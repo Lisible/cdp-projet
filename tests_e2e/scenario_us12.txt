@@ -1,0 +1,15 @@
+Depuis la page d'un projet:
+- Cliquer sur le lien d'un des sprints
+
+Constater la redirection vers la page d'avancement des tâches du sprint
+
+- Cliquer sur le bouton "nouvelle tâche"
+
+Constater la redirection vers le formulaire de création de tâche
+
+- Renseigner les champs "Intitulé", "Description", "Duration" et "Issue"
+- Cliquer sur le bouton "Confirmer"
+
+Constater la redirection vers la page d'avancement des tâches du sprint
+
+Constater la présence de la tâche dans la colonne "To do"

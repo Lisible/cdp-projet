@@ -1,0 +1,9 @@
+Depuis la liste d'avancement des tâches d'un sprint:
+
+- Effectuer un glisser-déposer d'une tâche de la colonne "to do" à "on going"
+
+Constater la présence de la tâche dans la colonne "on going" et son absence dans la colonne "to do"
+
+- Effectuer un glisser-déposer d'une tâche de la colonne "on going" à "done"
+
+Constater la présence de la tâche dans la colonne "done" et son absence dans la colonne "on going"
