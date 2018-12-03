@@ -1,6 +1,9 @@
 # cdp-projet
 [![Build Status](https://travis-ci.com/Lisible/cdp-projet.svg?branch=master)](https://travis-ci.com/Lisible/cdp-projet)
 
+
+![Duplicated lines](https://sonarcloud.io/api/project_badges/measure?project=Lisible_cdp-projet&metric=duplicated_lines_density)  ![Code smells](https://sonarcloud.io/api/project_badges/measure?project=Lisible_cdp-projet&metric=code_smells)
+
 Projet de Conduite de Projet
 
 # Objectif
@@ -36,7 +39,6 @@ Notre projet suivra le pattern Model View Controller (MVC). L'arborescence des f
 **/cdp-projet/tests_e2e**: Contient les fichiers des tests d'intégration.  
 **/cdp-projet/spec**: Contient les différents fichiers liés aux tâches de spécification.  
 **/cdp-projet/doc**: Contient les guides d'installation du projet.  
-
 # Les issues (le Backlog)
 | ID | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Difficulté | Priorité | 
 |----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|----------| 
