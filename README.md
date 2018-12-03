@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.com/Lisible/cdp-projet.svg?branch=master)](https://travis-ci.com/Lisible/cdp-projet)
 
 
-![Duplicated lines](https://sonarcloud.io/api/project_badges/measure?project=Lisible_cdp-projet&metric=duplicated_lines_density)  ![Code smells](https://sonarcloud.io/api/project_badges/measure?project=Lisible_cdp-projet&metric=code_smells)
+[![Duplicated lines](https://sonarcloud.io/api/project_badges/measure?project=Lisible_cdp-projet&metric=duplicated_lines_density)](https://sonarcloud.io/component_measures?id=Lisible_cdp-projet&metric=duplicated_lines_density)  [![Code smells](https://sonarcloud.io/api/project_badges/measure?project=Lisible_cdp-projet&metric=code_smells)](https://sonarcloud.io/project/issues?id=Lisible_cdp-projet&resolved=false&types=CODE_SMELL)
 
 Projet de Conduite de Projet
 
