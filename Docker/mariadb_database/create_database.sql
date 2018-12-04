@@ -40,11 +40,14 @@ CREATE TABLE Task (taskId INT NOT NULL AUTO_INCREMENT,
                    taskTitle VARCHAR(100) NOT NULL,
                    taskDescription VARCHAR(500),
                    taskWorkload INT,
-                   taskIssue INT NOT NULL,
+                   taskIssue VARCHAR(50) NOT NULL,
+                   taskState ENUM('todo', 'ongoing', 'done') NOT NULL DEFAULT 'todo',
+                   taskImplementor INT,
                    projectId INT NOT NULL,
                    sprintId INT NOT NULL,
                    PRIMARY KEY (taskId),
-                   CONSTRAINT fkTaskProject FOREIGN KEY (projectId, sprintId) REFERENCES ProjectSprint(projectId, sprintId));
+                   CONSTRAINT fkTaskProject FOREIGN KEY (projectId, sprintId) REFERENCES ProjectSprint(projectId, sprintId),
+                   CONSTRAINT fkTaskProjectMember FOREIGN KEY (taskImplementor) REFERENCES ApplicationUser(userId));
 
 INSERT INTO ApplicationUser(userUsername, userPasswordHash, userEmail, userFirstName, userLastName)
 VALUES ('root', 

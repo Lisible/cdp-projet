@@ -1,0 +1,16 @@
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.task {
+	border: 1px solid black;
+}
+
+.task span {
+	display: block;
+}
+
+h2 {
+	text-align: center;
+}

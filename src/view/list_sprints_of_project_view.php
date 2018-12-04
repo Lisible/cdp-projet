@@ -10,7 +10,8 @@ if($sprints != null): ?>
         <?php foreach($sprints as $sprint): ?>
             <li class="list-group-item">
               <span><?php echo "Sprint $sprint"; ?></span>
-              <span><button type="button" class="btn btn-danger" id="delete-sprint-button" onclick="SupprimerSprint(<?php echo $sprint; ?>, <?php echo $project_id ?>);">Supprimer</button></span>
+              <button type="button", class="btn btn-info" onclick="window.location.href = 'tasks_sprint.php?project_id=<?php echo $project_id; ?>&sprint_id=<?php echo $sprint ?>'">Liste des tâches</button>
+              <button type="button" class="btn btn-danger" id="delete-sprint-button" onclick="SupprimerSprint(<?php echo $sprint; ?>, <?php echo $project_id ?>);">Supprimer</button>
             </li>
         <?php endforeach; ?>
     </ul>

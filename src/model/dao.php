@@ -3,6 +3,7 @@
 include_once('model/project.php');
 include_once('model/user_story.php');
 include_once('model/user.php');
+include_once('model/task.php');
 
 class DAO
 {
@@ -138,6 +139,46 @@ class DAO
       catch (\PDOException $e){
         die($e);
       }
+    }
+
+    public static function addTaskToSprint($task, $projectId, $sprintId) {
+        try {
+            $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+            $sqlQuery = 'INSERT INTO Task(taskTitle, taskDescription, taskWorkload, taskIssue, projectId, sprintId)
+                         VALUES(?,?,?,?,?,?)';
+            $statement = $pdo->prepare($sqlQuery);
+            $statement->execute([$task->getTitle(),
+                                  $task->getDescription(),
+                                  $task->getWorkload(),
+                                  $task->getIssue(),
+                                  $projectId,
+                                  $sprintId]);
+        } 
+        catch (\PDOException $e) {
+            die($e);
+        }
+    }
+
+    public static function getTasksFromSprint($projectId, $sprintId, $state) {
+        $tasks = [];
+
+        try {
+            $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+            $sqlQuery = 'SELECT * FROM Task WHERE projectId = ? AND sprintId = ? AND taskState = ?;';
+            $statement = $pdo->prepare($sqlQuery);
+            $statement->execute([$projectId, $sprintId, $state]);
+            $queryResults = $statement->fetchAll();
+
+            foreach($queryResults as $queryResult){
+                $task = DAO::createTaskFromQueryResult($queryResult);
+                array_push($tasks, $task);
+            }
+        }
+        catch(\PDOException $e) {
+            die($e);
+        }
+
+        return $tasks;
     }
 
     public static function deleteUserStory($userStoryId){
@@ -343,5 +384,20 @@ class DAO
         $user->setEmail($queryResult['userEmail']);
         $user->setUsername($queryResult['userUsername']);
         return $user;
+    }
+
+    private static function createTaskFromQueryResult($queryResult) {
+        $task = new Task();
+        $task->setId($queryResult['taskId']);
+        $task->setTitle($queryResult['taskTitle']);
+        $task->setDescription($queryResult['taskDescription']);
+        $task->setWorkload($queryResult['taskWorkload']);
+        $task->setIssue($queryResult['taskIssue']);
+        $task->setState($queryResult['taskState']);
+        $task->setImplementor($queryResult['taskImplementor']);
+        $task->setProjectId($queryResult['projectId']);
+        $task->setSprintId($queryResult['sprintId']);
+
+        return $task;
     }
 }
