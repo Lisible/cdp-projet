@@ -85,6 +85,13 @@ Chemin du fichier: disconnect.php
 # Stockage des mot de passes
 Hachage des mots de passe avec l'algorithme Argon2
 
+# Page d'ajout de tâche
+Chemin du fichier: add_task.php
+Nom du champ de l'intitulé: task-title
+Nom du champ de la description: task-description
+Nom du champ de la charge de travail: task-workload
+Nom du champ de l'issue associée: task-issue 
+
 # DESIGN DE LA PAGE D'AJOUT D'UN UTILISATEUR A UN PROJET
 Nom du fichier: add_user_to_project.php
 Nom du champ pour ajouter l'utilisateur: username
@@ -145,5 +152,3 @@ Nom du bouton permettant de fermer le pop-up: "OK"
 Message du pop-up: "Veuillez remplir la totalité des champs obligatoires."
 
 Nom du bouton permettant de fermer le pop-up: "OK"
- 
- 
