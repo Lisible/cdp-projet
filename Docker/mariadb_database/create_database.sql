@@ -36,6 +36,16 @@ CREATE TABLE ProjectSprint (projectId INT NOT NULL,
                             PRIMARY KEY (projectId, sprintId),
                             CONSTRAINT fkProjectSprintProject FOREIGN KEY (projectId) REFERENCES Project(projectId));
 
+CREATE TABLE Task (taskId INT NOT NULL AUTO_INCREMENT,
+                   taskTitle VARCHAR(100) NOT NULL,
+                   taskDescription VARCHAR(500),
+                   taskWorkload INT,
+                   taskIssue INT NOT NULL,
+                   projectId INT NOT NULL,
+                   sprintId INT NOT NULL,
+                   PRIMARY KEY (taskId),
+                   CONSTRAINT fkTaskProject FOREIGN KEY (projectId, sprintId) REFERENCES ProjectSprint(projectId, sprintId));
+
 INSERT INTO ApplicationUser(userUsername, userPasswordHash, userEmail, userFirstName, userLastName)
 VALUES ('root', 
         '$argon2i$v=19$m=1024,t=2,p=2$aTYvdExYVU1ENUZiTU1nRw$p1hDGLN5vMwjBhGNGnsfgevTXXTC+iPb+aTidQbzipc',
