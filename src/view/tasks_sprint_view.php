@@ -12,7 +12,9 @@
 						<span class="task-title"><?php echo $task->getTitle() ?></span>
 						<span class="task-workload">Charge de travail: <?php echo $task->getWorkload() ?>jh</span>
 						<span class="task-issue">Issue associée: <?php echo $task->getIssue() ?></span>
-					        <button type="button" class="btn btn-danger" id="delete-task-button" onclick="SupprimerTache(<?php echo $task->getId()?>);">Supprimer</button>
+					         <button type="button", class="btn btn-info" onclick="window.location.href = 'task_details.php?task_id=<?php echo $task->getId()?>'">Détails</button>
+                                                <button type="button" class="btn btn-danger" id="delete-task-button" onclick="SupprimerTache(<?php echo $task->getId()?>);">Supprimer</button>
+
                                         </div>
 				</li>
 				<?php endforeach; ?>

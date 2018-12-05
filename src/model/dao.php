@@ -110,6 +110,22 @@ class DAO
         return $sprints;
     }
 
+    public static function getTaskById($taskId){
+      $task = null;
+      try {
+        $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+        $sqlQuery = 'SELECT * FROM Task WHERE taskId = ?;';
+        $statement = $pdo->prepare($sqlQuery);
+        $statement->execute(array($taskId));
+        $queryResult = $statement->fetch();
+        $task = self::createTaskFromQueryResult($queryResult);
+      }
+      catch (\PDOException $e){
+        die($e);
+      }
+      return $task;
+    }
+
     public static function addSprintToProject($projectId) {
         try {
             $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
@@ -376,6 +392,7 @@ class DAO
 		$project->setOwnerId($queryResult['ownerId']);
 		return $project;
 	}
+
 
 	private static function createUserStoryFromQueryResult($queryResult) {
 		$userStory = new UserStory();
