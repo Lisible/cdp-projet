@@ -1,0 +1,7 @@
+Depuis la page détaillée d'un de mes projets:
+Cliquer sur le bouton "Sprint".
+Constater la redirection vers la liste des sprints.
+Cliquer sur le bouton "Liste des tâches".
+Constater la redirection vers la liste des tâches sous forme de kanban.
+Cliquer sur le bouton associé à une tâche "détails"
+Constater la redirection vers la page affichant les détails de la tâche.
