@@ -177,3 +177,5 @@ Message du pop-up: "Voulez-vous supprimer cette tâche? Cette action sera irrév
 Nom du bouton permettant de fermer le pop-up: "Anuuler"  
 
 Nom du bouton permettant de valider la suppression: "OK"  
+
+Nom de la page de suppression d'une tâche: delete_task.php
