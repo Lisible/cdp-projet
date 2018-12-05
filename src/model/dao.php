@@ -181,6 +181,18 @@ class DAO
         return $tasks;
     }
 
+    public static function deleteTask($taskId){
+      try {
+        $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+        $sqlQuery = 'DELETE FROM Task WHERE taskId = ?;';
+        $statement = $pdo->prepare($sqlQuery);
+        $statement->execute(array($taskId));
+       }
+        catch (\PDOException $e) {
+          die($e);
+        }
+    }
+
     public static function deleteUserStory($userStoryId){
       try {
         $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
