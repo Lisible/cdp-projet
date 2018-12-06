@@ -197,6 +197,17 @@ class DAO
         return $tasks;
     }
 
+    public static function setNewState($taskId, $newState){
+      try { 
+        $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
+        $sqlQuery = "UPDATE Task SET taskState = '?' WHERE taskId = ?;";
+        $statement = $pdo->prepare($sqlQuery);
+        $statement->execute([$taskId, $newState]);
+      } catch (\PDOException $e){
+        die($e);
+      }
+    }
+
     public static function deleteTask($taskId){
       try {
         $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');

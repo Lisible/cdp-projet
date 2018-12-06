@@ -7,7 +7,7 @@
 ?>
 <div class="form-group row">
   <label style="font-weight: bold;" class="col-2 col-from-label">Intitulé</label>
-  <div class="form-group row">
+  <div class="col-10">
     <?php echo $task->getTitle(); ?>
   </div>
 </div>
