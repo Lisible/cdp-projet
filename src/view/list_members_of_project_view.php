@@ -1,6 +1,8 @@
-<?php if($DATA['membres'] != null): ?>
+<?php
+$members = $DATA['membres'];
+if($members != null): ?>
     <ul class="list-group" id="membres-list">
-        <?php foreach($DATA['membres'] as $member): ?>
+        <?php foreach($members as $member): ?>
             <li class="list-group-item">
                 <span><?php echo $member->getFirstname() . " " . $member->getLastname()?></span>
                 <br>
@@ -10,7 +12,7 @@
     </ul>
 <?php endif; ?>
 
-<?php if($DATA['membres'] == null): ?>
+<?php if($members == null): ?>
     <span id="no-project">Aucun membre dans le projet</span>
 <?php endif; ?>
 

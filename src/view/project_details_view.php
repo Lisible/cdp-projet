@@ -5,12 +5,14 @@
     $duree_sprint;
     $date;
     $html = '';
-    if ($DATA['project'] != null) {
-        $id = $DATA['project']->getId();
-        $nom = $DATA['project']->getName();
-        $description = $DATA['project']->getDescription();
-        $duree_sprint = $DATA['project']->getSprintDuration();
-        $date = date_create($DATA['project']->getBeginDate());
+    $project = $DATA['project'];
+
+    if ($project != null) {
+        $id = $project->getId();
+        $nom = $project->getName();
+        $description = $project->getDescription();
+        $duree_sprint = $project->getSprintDuration();
+        $date = date_create($project->getBeginDate());
         $date = date_format($date, "d/m/Y");
         $html = '
         <a href="list_backlog.php?project_id= '. $id .'" class="btn btn-info" id="backlog-button">Backlogs</a>
