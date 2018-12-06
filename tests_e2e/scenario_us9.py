@@ -119,7 +119,6 @@ try:
     elem = driver.find_element_by_id("delete-us-2")
 except NoSuchElementException:
     assert True
-    pass
 except Exception:
     assert False
 
