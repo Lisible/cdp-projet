@@ -200,7 +200,7 @@ class DAO
     public static function setNewState($taskId, $newState){
       try { 
         $pdo = new PDO('mysql:host=mysql;dbname=cdp;charset=utf8mb4', 'root', 'root');
-        $sqlQuery = "UPDATE Task SET taskState = '?' WHERE taskId = ?;";
+        $sqlQuery = "UPDATE Task SET taskState = \'?\' WHERE taskId = ?;";
         $statement = $pdo->prepare($sqlQuery);
         $statement->execute([$taskId, $newState]);
       } catch (\PDOException $e){

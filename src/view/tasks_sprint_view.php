@@ -65,8 +65,8 @@
                           } else {}
                               }
   function moveTask(new_state, task_id){
-    var form, newInput1, newInput2;
-    form.document.createElement('form');
+    let form, newInput1, newInput2;
+    form = document.createElement('form');
     form.action = 'tasks_sprint.php';
     form.method = 'post';
 
@@ -80,9 +80,9 @@
     newInput2.name = 'new_state';
     newInput2.value = new_state;
 
-    form.appendChild(newImput1);
+    form.appendChild(newInput1);
     form.appendChild(newInput2);
-    document.getElementById('hidden_form_container').apendChild(form);
+    document.getElementById('hidden_form_container').appendChild(form);
     form.submit();
   }
   

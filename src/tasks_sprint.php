@@ -32,14 +32,12 @@ new class extends Controller {
                 }
                 $sprint_id = $task->getSprintId();
                 $project_id = $task->getProjectId();
-		$this->render('tasks_sprint_view');
 		$this->setData('project_id', $project_id);
-		$this->setData('sprint_id', $sprint_id);
 		$this->setData('sprint_id', $sprint_id);
 		$this->setData('todoTasks', DAO::getTasksFromSprint($project_id, $sprint_id, 'todo'));
 		$this->setData('ongoingTasks', DAO::getTasksFromSprint($project_id, $sprint_id, 'ongoing'));
 		$this->setData('doneTasks', DAO::getTasksFromSprint($project_id, $sprint_id, 'done'));
 
-		$this->render('tasks_sprint_view');
+                header("Location: tasks_sprint.php?project_id=$project_id&sprint_id=$sprint_id");
 	}
 };
