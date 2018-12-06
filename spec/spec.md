@@ -155,7 +155,11 @@ Nom du bouton permettant de fermer le pop-up: "OK"
 
 # DESIGN DE LA PAGE DE DETAILS D'UNE TACHE
 
-Nom du bouton permettant d'accéder à la page: "Détails"    
+Nom du bouton permettant d'accéder à la page: "Détails"
+
+Nom du bouton permettant de faire défiler l'utilisateur à la file de discussion : "Lire les commentaires"
+
+Nom du bouton permettant d'ajouter un commentaire à une tâche : "Ajouter votre note"
 
 Nom de la page: task_details.php  
 
