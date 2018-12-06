@@ -38,6 +38,6 @@ new class extends Controller {
 		$this->setData('ongoingTasks', DAO::getTasksFromSprint($project_id, $sprint_id, 'ongoing'));
 		$this->setData('doneTasks', DAO::getTasksFromSprint($project_id, $sprint_id, 'done'));
 
-                header("Location: tasks_sprint.php?project_id=$project_id&sprint_id=$sprint_id");
+               header("Location: tasks_sprint.php?project_id=$project_id&sprint_id=$sprint_id");
 	}
 };

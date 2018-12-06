@@ -5,9 +5,9 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col" id="todo">
+		<div class="col" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
 			<h2>To do</h2>
-			<ul>
+			<ul id="ultodo">
 				<?php foreach($DATA['todoTasks'] as $task): ?>
 				<li>
 					<div class="task" name="<?php echo $task->getState(); ?>"  id="<?php echo $task->getId();?>" draggable="true" ondragstart="drag(event)">
@@ -27,10 +27,11 @@
 			<ul id="ulongoing">
 				<?php foreach($DATA['ongoingTasks'] as $task): ?>
 				<li>
-					<div class="task">
+					<div class="task" name="<?php echo $task->getState(); ?>"  id="<?php echo $task->getId();?>" draggable="true" ondragstart="drag(event)">
 						<span class="task-title"><?php echo $task->getTitle() ?></span>
 						<span class="task-workload">Charge de travail: <?php echo $task->getWorkload() ?>jh</span>
 						<span class="task-issue">Issue associée: <?php echo $task->getIssue() ?></span>
+					         <button type="button", class="btn btn-info" onclick="window.location.href = 'task_details.php?task_id=<?php echo $task->getId()?>'">Détails</button>
 					        <button type="button" class="btn btn-danger" id="delete-task-button" onclick="SupprimerTache(<?php echo
                                                     $task->getId()?>);">Supprimer</button>
                                         </div>
@@ -39,15 +40,16 @@
 			</ul>
 		</div>
 
-		<div class="col" id="done">
+		<div class="col" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
 			<h2>Done</h2>
-			<ul>
+			<ul id="uldone">
 				<?php foreach($DATA['doneTasks'] as $task): ?>
 				<li>
-					<div class="task">
+					<div class="task" name="<?php echo $task->getState(); ?>"  id="<?php echo $task->getId();?>" draggable="true" ondragstart="drag(event)">
 						<span class="task-title"><?php echo $task->getTitle() ?></span>
 						<span class="task-workload">Charge de travail: <?php echo $task->getWorkload() ?>jh</span>
 						<span class="task-issue">Issue associée: <?php echo $task->getIssue() ?></span>
+					         <button type="button", class="btn btn-info" onclick="window.location.href = 'task_details.php?task_id=<?php echo $task->getId()?>'">Détails</button>
 					        <button type="button" class="btn btn-danger" id="delete-task-button" onclick="SupprimerTache(<?php echo
                                                     $task->getId()?>);">Supprimer</button>
                                         </div>
@@ -99,12 +101,12 @@
     var data = elem.dataTransfer.getData("text");
     var state = document.getElementById(data);
     console.log(state.getAttribute("name").localeCompare(elem.target.id));
-    if (state.getAttribute("name").localeCompare(elem.target.id) != 0){
-     var ul = document.getElementById("ul"+elem.target.id);
-     var li = document.createElement("li");
-     li.appendChild(document.getElementById(data));
-     ul.appendChild(li);
-     moveTask(elem.target.id, data);
-  }
+    var ul = document.getElementById("ul"+elem.target.id);
+    if (ul != null ){ 
+      var li = document.createElement("li");
+      li.appendChild(document.getElementById(data));
+      ul.appendChild(li);
+      moveTask(elem.target.id, data);
+   }
  }
 </script>
