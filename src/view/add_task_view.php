@@ -1,5 +1,9 @@
+<?php
+$project_id = $DATA['project_id'];
+$sprint_id = $DATA['sprint_id'];
+?>
 <div class="container">
-    <form data-toggle="data-validator" class="form-horizontal" role="form" method="POST" action="../add_task.php?project_id=<?php echo $DATA['project_id']; ?>&sprint_id=<?php echo $DATA['sprint_id']; ?>">
+    <form data-toggle="data-validator" class="form-horizontal" role="form" method="POST" action="../add_task.php?project_id=<?php echo $project_id; ?>&sprint_id=<?php echo $sprint_id; ?>">
         <div class="form-group row">
             <label for="task-title" class="col-2 col-form-label">Intitulé
                 <span>&#10033;</span>
@@ -33,10 +37,10 @@
                        placeholder="L'issue associée" required>
             </div>
         </div>
-        <input type="hidden" name="project_id" value="<?php echo $DATA['project_id']; ?>">
-        <input type="hidden" name="sprint_id" value="<?php echo $DATA['sprint_id']; ?>">
+        <input type="hidden" name="project_id" value="<?php echo $project_id; ?>">
+        <input type="hidden" name="sprint_id" value="<?php echo $sprint_id; ?>">
         <button type="submit" class="btn btn-success">Valider</button>
-        <button type="button" class="btn btn-danger" onclick="window.location.href = '../tasks_sprint.php?project_id=<?php echo $DATA['project_id']; ?>&sprint_id=<?php echo $DATA['sprint_id']; ?>'">
+        <button type="button" class="btn btn-danger" onclick="window.location.href = '../tasks_sprint.php?project_id=<?php echo $project_id; ?>&sprint_id=<?php echo $sprint_id; ?>'">
         Annuler</button>
     </form>
 </div>
