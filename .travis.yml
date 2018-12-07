@@ -4,6 +4,10 @@ env:
   - MOZ_HEADLESS=1
 addons:
   firefox: latest
+  sonarcloud:
+    organization: "lisible-github"
+    token:
+      secure: "q8qStnE5HuQSyCHn4QxPZ0P+zkt3AoXRn/I5FeByohocA2UV3O7uOqnYmRgtg8pstnBFrOQ78AitVuU+GhPDX4XkOSbx5sl1QmDMHbe97ZIORCP9Fjyw6dJjDmG/bY9yr+1AqremEUNorZNnYigRIrGjxX8wFjW/qtXq4N4YBh3yV1SZ8ATMg6StXfb7D4ndp4Y5wpzDiMSm0p+eSpZWBPef+O2Ak0GFoxgWuOHCYA33jZODoxTO3A9rskXEl7YdGrL92eyEJZyuJnhh79sThUG8O7VMGuUNuwRezI/x/qQdTJDAOAtw79P0mB4vZvl7teOvA8ZV/Iw+LvXGGIHKydEvy16hbATsS/ZXfSPz4+LXZc+GQRzr3jrNrk48MiLpA7I0XVs29U0zaWFiqi4W6bPkQCLzD4zHx42uf0k9jeVfTzcZQi3pgg+lmtwO8hE8oFpChqw9SD1l6eROV6dlxDG5t5cJsRTgb9/l+oamHgQfE2SocEby/RkQL7Gd3lE3KucuXqiLRByDpGtGCHeUmu+/CTKT7msWcM36Gdn4qRW5Gx/ip4mSr8SPdloaS52tHvB8u6R/fMeYiMWhG3FBAsbbURhAEAuhM5bd+5H+Ah9SKTpjZX2K7Gq8M1awJ+Ec3sd3C/hV1pJm38uUaoERMHyXUx5EE03uUDH1hz+6Nic="
 
 language: python
 python:
@@ -26,3 +30,4 @@ script:
     - sleep 10
     - ./tests_e2e/launcher.sh
     - cat geckodriver.log
+    - sonar-scanner
