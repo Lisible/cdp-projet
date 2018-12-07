@@ -1,9 +1,12 @@
+<?php
+$backlog = $DATA['backlog'];
+?>
 <a href=" <?php echo'add_user_story.php?project_id='.$DATA['project_id']; ?>" id="add_user_story_link">+</a>
 
 <?php 
-	if($DATA['backlog'] != null): ?>
+	if($backlog != null): ?>
   <ul id="backlog-list">
-  <?php foreach($DATA['backlog'] as $us): ?>
+  <?php foreach($backlog as $us): ?>
      <li>
        <span><?php echo $us->getNumber() ?> </span>
        <span><?php echo $us->getDescription() ?> </span>
@@ -14,7 +17,7 @@
   <?php endforeach; ?>
   </ul>
 <?php endif; ?>
-<?php if($DATA['backlog'] == null): ?>
+<?php if($backlog == null): ?>
   <span id="no-us">Aucune User story</span>
 <?php endif; ?>
 
