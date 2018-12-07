@@ -9,12 +9,12 @@ class DAO
 {
     private static $url = 'mysql:host=mysql;dbname=cdp;charset=utf8mb4';
     private static $username = 'root';
-    private static $password = 'root';
+    private static $psd = 'root';
 
 	public static function createProject($userId, $project)
 	{
 		try {
-			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
 			$sqlQuery = 'INSERT INTO Project(projectName, projectDescription, projectSprintDuration, projectBeginDate, ownerId) 
 						 VALUES(?,?,?,?,?);';
 			$statement = $pdo->prepare($sqlQuery);
@@ -34,7 +34,7 @@ class DAO
 		$projects = [];
 
 		try {
-			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
 			$sqlQuery = 'SELECT * FROM Project;';
 			$statement = $pdo->prepare($sqlQuery);
 			$statement->execute();
@@ -56,7 +56,7 @@ class DAO
         $projects = [];
 
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'SELECT * FROM Project WHERE ownerId = ?;';
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute(array($ownerId));
@@ -79,7 +79,7 @@ class DAO
         $project = null;
 
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'SELECT * FROM Project WHERE projectId = ?;';
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute(array($projectId));
@@ -97,7 +97,7 @@ class DAO
 	    $sprints = [];
 
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'SELECT * FROM ProjectSprint WHERE projectId = ?;';
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute(array($projectId));
@@ -117,7 +117,7 @@ class DAO
     public static function getTaskById($taskId){
       $task = null;
       try {
-        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
         $sqlQuery = 'SELECT * FROM Task WHERE taskId = ?;';
         $statement = $pdo->prepare($sqlQuery);
         $statement->execute(array($taskId));
@@ -132,7 +132,7 @@ class DAO
 
     public static function addSprintToProject($projectId) {
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQueryCount = 'SELECT count(*) FROM ProjectSprint WHERE projectId = ?;';
             $statementCount = $pdo->prepare($sqlQueryCount);
             $statementCount->execute([$projectId]);
@@ -151,7 +151,7 @@ class DAO
 
     public static function deleteSprint($sprintID, $projectID){
       try {
-        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
         $sqlQuery = 'DELETE FROM ProjectSprint WHERE projectId = ? AND sprintId = ?;';
         $statement = $pdo->prepare($sqlQuery);
         $statement->execute([$projectID, $sprintID]);
@@ -163,7 +163,7 @@ class DAO
 
     public static function addTaskToSprint($task, $projectId, $sprintId) {
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'INSERT INTO Task(taskTitle, taskDescription, taskWorkload, taskIssue, projectId, sprintId)
                          VALUES(?,?,?,?,?,?)';
             $statement = $pdo->prepare($sqlQuery);
@@ -183,7 +183,7 @@ class DAO
         $tasks = [];
 
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'SELECT * FROM Task WHERE projectId = ? AND sprintId = ? AND taskState = ?;';
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute([$projectId, $sprintId, $state]);
@@ -203,7 +203,7 @@ class DAO
 
     public static function setNewState($taskId, $newState){
       try { 
-        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
         $sqlQuery = 'UPDATE Task SET taskState = ? WHERE taskId = ?;';
         $statement = $pdo->prepare($sqlQuery);
         $statement->execute([$newState, $taskId]);
@@ -214,7 +214,7 @@ class DAO
 
     public static function deleteTask($taskId){
       try {
-        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
         $sqlQuery = 'DELETE FROM Task WHERE taskId = ?;';
         $statement = $pdo->prepare($sqlQuery);
         $statement->execute(array($taskId));
@@ -226,7 +226,7 @@ class DAO
 
     public static function deleteUserStory($userStoryId){
       try {
-        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+        $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
         $sqlQuery = 'DELETE FROM Issue WHERE issueId = ?;';
         $statement = $pdo->prepare($sqlQuery);
         $statement->execute(array($userStoryId));
@@ -239,7 +239,7 @@ class DAO
 	public static function createUserStory($userStory) 
 	{
 		try {
-			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
 			$sqlQuery = 'INSERT INTO Issue(issueNumber, issueDescription, issuePriority, issueDifficulty, projectId) 
 						 VALUES(?,?,?,?,?);';
 			$statement = $pdo->prepare($sqlQuery);
@@ -259,7 +259,7 @@ class DAO
 		$userStories = [];
 
 		try {
-			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
 			$sqlQuery = 'SELECT * FROM Issue WHERE projectId = ?;';
 			$statement = $pdo->prepare($sqlQuery);
 			$statement->execute([$projectId]);
@@ -279,7 +279,7 @@ class DAO
 
 	public static function connectUser($login, $pass) {
 		try {
-			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
 			$sqlQuery = 'SELECT userId, userPasswordHash FROM ApplicationUser WHERE userUserName = ?;';
 			$statement = $pdo->prepare($sqlQuery);
 			$statement->execute([$login]);
@@ -298,11 +298,11 @@ class DAO
 		}
 	}
 
-	public static function createUser($login, $password, $firstname, $lastname, $email) {
-		$hashedPassword = DAO::hashPassword($password);
+	public static function createUser($login, $psd, $firstname, $lastname, $email) {
+		$hashedPassword = DAO::hashPassword($psd);
 
 		try {
-			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+			$pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
 			$sqlQuery = 'INSERT INTO ApplicationUser(userUsername, userPasswordHash, userEmail, userFirstName, userLastName) VALUES(?,?,?,?,?);';
 			$statement = $pdo->prepare($sqlQuery);
 			$status = $statement->execute([$login, $hashedPassword, $email, $firstname, $lastname]);
@@ -314,13 +314,13 @@ class DAO
 		}
 	}
 
-	private static function hashPassword($password) {
-		return password_hash($password, PASSWORD_ARGON2I, ['memory_cost' => 1024, 'time_cost' => 4, 'threads' => 3]);
+	private static function hashPassword($psd) {
+		return password_hash($psd, PASSWORD_ARGON2I, ['memory_cost' => 1024, 'time_cost' => 4, 'threads' => 3]);
 	}
 
 	public static function existProject($projectId) {
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'SELECT * FROM Project WHERE projectId = ?;';
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute(array($projectId));
@@ -334,7 +334,7 @@ class DAO
 
     public static function existUser($username) {
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'SELECT * FROM ApplicationUser WHERE userUsername = ?;';
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute(array($username));
@@ -348,7 +348,7 @@ class DAO
 
     public static function addUserToProject($membreId, $projectId) {
 	    try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'INSERT INTO ProjectMember(projectId, userId)
                           VALUES (?,?)';
             $statement = $pdo->prepare($sqlQuery);
@@ -361,7 +361,7 @@ class DAO
 
     public static function getUserByUserName($username) {
 	    try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'SELECT * FROM ApplicationUser WHERE userUsername = ?;';
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute(array($username));
@@ -377,7 +377,7 @@ class DAO
         $members = [];
 
         try {
-            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$password);
+            $pdo = new PDO(DAO::$url, DAO::$username, DAO::$psd);
             $sqlQuery = 'SELECT * FROM 
                           (ProjectMember INNER JOIN ApplicationUser ON ApplicationUser.userId=ProjectMember.userId) 
                           WHERE projectId = ?;';
