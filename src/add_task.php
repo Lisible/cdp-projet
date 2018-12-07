@@ -3,7 +3,7 @@ include_once('framework/controller.php');
 include_once('model/dao.php');
 include_once('model/task.php');
 
-new class extends Controller {
+class AddTaskController extends Controller {
 
 	public function setup() {
         $this->connectedCheck();
@@ -36,4 +36,6 @@ new class extends Controller {
 		$this->setData('sprint_id', $postData['sprint_id']);
 		$this->render('add_task_view');
 	}
-};
+}
+
+$addTaskController = new AddTaskController();
