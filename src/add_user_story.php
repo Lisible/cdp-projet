@@ -26,6 +26,5 @@ new class extends Controller {
         DAO::createUserStory($us);
 
         header("Location: list_backlog.php?project_id=".$postData['project_id']);
-      //$this->render('list_backlog');
     }
 };
