@@ -1,5 +1,9 @@
-<a href="list_sprints_of_project.php?project_id=<?php echo $DATA['project_id']; ?>">Retour</a>
-<a href="add_task.php?project_id=<?php echo $DATA['project_id']; ?>&sprint_id=<?php echo $DATA['sprint_id']; ?>">Ajouter une tâche</a>
+<?php
+$project_id = $DATA['project_id'];
+?>
+
+<a href="list_sprints_of_project.php?project_id=<?php echo $project_id; ?>">Retour</a>
+<a href="add_task.php?project_id=<?php echo $project_id; ?>&sprint_id=<?php echo $DATA['sprint_id']; ?>">Ajouter une tâche</a>
 
 <div id="hidden_form_container" style="display: none;"></div>
 
@@ -63,7 +67,7 @@
 <script defer>
       function SupprimerTache(id_task){
             if(confirm("Voulez-vous vraiment supprimer cette tâche? Cette action sera irréversible.")){
-                    window.location.href = "delete_task.php?task_id="+id_task+"&project_id="+<?php echo $DATA['project_id'];?>+"&sprint_id="+<?php echo $DATA['sprint_id'];?>;
+                    window.location.href = "delete_task.php?task_id="+id_task+"&project_id="+<?php echo $project_id;?>+"&sprint_id="+<?php echo $DATA['sprint_id'];?>;
                           } else {}
                               }
   function moveTask(new_state, task_id){
