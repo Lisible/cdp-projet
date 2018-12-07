@@ -28,7 +28,7 @@ before_install:
     - pip install pyvirtualdisplay
 
 script:
+    - sonar-scanner
     - sleep 10
     - ./tests_e2e/launcher.sh
     - cat geckodriver.log
-    - sonar-scanner
