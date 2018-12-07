@@ -12,11 +12,13 @@ class TaskSprintController extends Controller {
 	}
 
 	public function onGet($getData) {
-		$this->setData('project_id', $getData['project_id']);
-		$this->setData('sprint_id', $getData['sprint_id']);
-		$this->setData('todoTasks', DAO::getTasksFromSprint($getData['project_id'], $getData['sprint_id'], 'todo'));
-		$this->setData('ongoingTasks', DAO::getTasksFromSprint($getData['project_id'], $getData['sprint_id'], 'ongoing'));
-		$this->setData('doneTasks', DAO::getTasksFromSprint($getData['project_id'], $getData['sprint_id'], 'done'));
+	    $project_id = $getData['project_id'];
+	    $sprint_id = $getData['sprint_id'];
+		$this->setData('project_id', $project_id);
+		$this->setData('sprint_id', $sprint_id);
+		$this->setData('todoTasks', DAO::getTasksFromSprint($project_id, $sprint_id, 'todo'));
+		$this->setData('ongoingTasks', DAO::getTasksFromSprint($project_id, $sprint_id, 'ongoing'));
+		$this->setData('doneTasks', DAO::getTasksFromSprint($project_id, $sprint_id, 'done'));
 
 		$this->render('tasks_sprint_view');
 	}
