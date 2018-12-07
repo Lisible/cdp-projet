@@ -325,7 +325,7 @@ class DAO
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute(array($projectId));
             $queryResult = $statement->fetch();
-            return $queryResult != null ? true : false ;
+            return $queryResult != null;
         }
         catch (\PDOException $e) {
             die($e);
@@ -339,7 +339,7 @@ class DAO
             $statement = $pdo->prepare($sqlQuery);
             $statement->execute(array($username));
             $queryResult = $statement->fetch();
-            return $queryResult != null ? true : false ;
+            return $queryResult != null;
         }
         catch (\PDOException $e) {
             die($e);
