@@ -2,7 +2,7 @@
 include_once('framework/controller.php');
 include_once('model/dao.php');
 
-new class extends Controller {
+class TaskSprintController extends Controller {
 
 	public function setup() {
         $this->connectedCheck();
@@ -40,4 +40,6 @@ new class extends Controller {
 
                header("Location: tasks_sprint.php?project_id=$project_id&sprint_id=$sprint_id");
 	}
-};
+}
+
+$tasksSprintController = new TaskSprintController();
