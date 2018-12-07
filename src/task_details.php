@@ -2,7 +2,7 @@
 include_once('framework/controller.php');
 include_once('model/dao.php');
 
-new class extends Controller {
+class TaskDetailsController extends Controller {
 
   public function setup() {
     $this->connectedCheck();
@@ -22,5 +22,7 @@ new class extends Controller {
   public function onPost($postData) {
     $this->render('task_details_view');
   }
-};
+}
+
+$taskDetails = new TaskDetailsController();
 ?>
